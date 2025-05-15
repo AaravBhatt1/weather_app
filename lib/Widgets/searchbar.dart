@@ -6,7 +6,8 @@ class WeatherSearchbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SearchBar(
-      hintText: Text(),
+      hintText: "Ask Questions about Plants Here",
+      //TODO: Add search functionality
     );
   }
 }

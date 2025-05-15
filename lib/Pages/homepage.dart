@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Widgets/searchbar.dart';
 
+//TODO: Rename (maybe) and make actual homepage what's in the container
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
@@ -9,9 +10,14 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const WeatherSearchbar(),
-        actions: [
-          IconButton(onPressed: () => {}, icon: Icon(Icons.settings))
-        ]
+      ),
+      body: const Placeholder(),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.cloud), label: "Weather"),
+          BottomNavigationBarItem(icon: Icon(Icons.energy_savings_leaf), label: "My Plants"),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings")
+        ],
       ),
     );
   }
