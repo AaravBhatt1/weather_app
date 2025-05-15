@@ -15,7 +15,7 @@ class PageNavigation extends StatelessWidget {
         ],
       ),
       body: const Placeholder(),
-      bottomNavigationBar: BottomNavigationB:drawer: ,ar(
+      bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.cloud), label: "Weather"),
           BottomNavigationBarItem(icon: Icon(Icons.energy_savings_leaf), label: "My Plants"),
