@@ -5,6 +5,8 @@ class WeatherSearchbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SearchBar();
+    return const SearchBar(
+      hintText: Text(),
+    );
   }
 }

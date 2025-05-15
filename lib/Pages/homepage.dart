@@ -8,8 +8,8 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: WeatherSearchbar(),
-        actions: const [
+        title: const WeatherSearchbar(),
+        actions: [
           IconButton(onPressed: () => {}, icon: Icon(Icons.settings))
         ]
       ),
