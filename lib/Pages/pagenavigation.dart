@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/Pages/weatherpage.dart';
 import 'package:weather_app/Widgets/searchbar.dart';
 
-//TODO: Rename (maybe) and make actual homepage what's in the container
-class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+class PageNavigation extends StatelessWidget {
+  const PageNavigation({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: const WeatherSearchbar(),
       ),
-      body: const Placeholder(),
+      body: const Weatherpage(),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.cloud), label: "Weather"),
