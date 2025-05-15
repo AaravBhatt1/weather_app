@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Pages/pagenavigation.dart';
+import 'Pages/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,12 +18,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         searchBarTheme: const SearchBarThemeData(
           elevation: WidgetStatePropertyAll(0),
-        ),
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          elevation: 0,
+
         )
       ),
-      home: const PageNavigation(),
+      home: const Homepage(),
     );
   }
 }
