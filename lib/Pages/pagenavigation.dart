@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/Pages/weatherpage.dart';
 import 'package:weather_app/Widgets/searchbar.dart';
 
-//TODO: Rename (maybe) and make actual homepage what's in the container
 class PageNavigation extends StatelessWidget {
   const PageNavigation({super.key});
 
@@ -14,7 +14,7 @@ class PageNavigation extends StatelessWidget {
           IconButton(onPressed: () {}, icon: const Icon(Icons.search))
         ],
       ),
-      body: const Placeholder(),
+      body: const WeatherPage(), // TODO: Make dynamic
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.cloud), label: "Weather"),
