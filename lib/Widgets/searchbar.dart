@@ -10,7 +10,7 @@ class WeatherSearchbar extends StatelessWidget {
     viewHintText: "Search for information abouts Plants Here",
     suggestionsBuilder: (BuildContext context, SearchController controller) async {
       return plants.where((PlantEntry e) => e.name.toLowerCase().contains(controller.text.toLowerCase())).map((PlantEntry e) => ListTile(
-        leading: Image.network(e.img),
+        leading: Image.network(e.img, width: 50), // TODO: maybe crop
         title: Text(e.name),
         subtitle: Text(e.family),
         )
