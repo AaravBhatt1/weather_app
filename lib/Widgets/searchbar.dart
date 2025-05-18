@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import '../Pages/searchresults.dart';
+import '../Abstract/plant.dart';
 
 class WeatherSearchbar extends StatelessWidget {
   const WeatherSearchbar({super.key});
 
   @override
   Widget build(BuildContext context) {
-return SearchBar(
-  hintText: "Ask Questions about Plants Here",
-  onSubmitted: (query) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => SearchResultsPage(query), // Replace Placeholder with your target widget
-      ),
-    );
-  },
-);
+  return SearchAnchor.bar(
+    viewHintText: "Search for information abouts Plants Here",
+    suggestionsBuilder: (BuildContext context, SearchController controller) async {
+      return plants.where((PlantEntry e) => e.name.toLowerCase().contains(controller.text.toLowerCase())).map((PlantEntry e) => ListTile(
+        leading: Image.network(e.img),
+        title: Text(e.name),
+        subtitle: Text(e.family),
+        )
+      );
+    },
+  );
   }
 }
