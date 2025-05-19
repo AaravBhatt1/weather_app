@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
           elevation: 0,
-        )
+        ),
       ),
       home: const PageNavigation(),
     );
