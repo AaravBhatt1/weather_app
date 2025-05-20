@@ -22,29 +22,46 @@ class _WeatherPageState extends State<WeatherPage> {
               title: Text(city),
               // leading: const Icon(Icons.drag_handle),
             ), */
-          Image.asset(
-            'assets/sun.png',
-            key: const ValueKey('sun'),
-            width: 150,
-            height: 150,
-            fit: BoxFit.contain,
-          ),
-          const SizedBox(height: 20, key: ValueKey('box1')),
-          const Text(
-            'Welcome to the Weather App!',
-            key: ValueKey('text1'),
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold
+          Row(
+            key: ValueKey('row'),
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(
+                'assets/sun.png',
+                key: const ValueKey('sun'),
+                width: 150,
+                height: 150,
+                fit: BoxFit.contain,
               ),
-          ),
-          const SizedBox(height: 10, key: ValueKey('box2')),
-          const Text(
-            'Search and get your forecast instantly.',
-            key: ValueKey('text2'),
-            style: TextStyle(                fontSize: 16,
-              color: Colors.grey,
-            ),
+              const SizedBox(width: 16), // Space between image and text
+              const Expanded( // Make sure the text doesn’t overflow
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'CAMBRIDGE',
+                      key: ValueKey('text1'),
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+
+                    //TODO: replace 'DEG' with the current temperature
+                    Text(
+                      'DEG',
+                      key: ValueKey('text2'),
+                      style: TextStyle(
+                        fontSize: 80,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  
+                  ],
+                ),
+              ),
+            ],
           ),
 
         //stuff here
