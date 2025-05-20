@@ -16,12 +16,39 @@ class _WeatherPageState extends State<WeatherPage> {
       body: ReorderableListView(
         padding: const EdgeInsets.all(30),
         children: [
-          for (final city in cities)
+          /* for (final city in cities)
             ListTile(
               key: ValueKey(city), // Unique key is required
               title: Text(city),
               // leading: const Icon(Icons.drag_handle),
+            ), */
+          Image.asset(
+            'assets/sun.png',
+            key: const ValueKey('sun'),
+            width: 150,
+            height: 150,
+            fit: BoxFit.contain,
+          ),
+          const SizedBox(height: 20, key: ValueKey('box1')),
+          const Text(
+            'Welcome to the Weather App!',
+            key: ValueKey('text1'),
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold
+              ),
+          ),
+          const SizedBox(height: 10, key: ValueKey('box2')),
+          const Text(
+            'Search and get your forecast instantly.',
+            key: ValueKey('text2'),
+            style: TextStyle(                fontSize: 16,
+              color: Colors.grey,
             ),
+          ),
+
+        //stuff here
+
         ],
         onReorder: (oldIndex, newIndex) {
           setState(() {
@@ -40,3 +67,4 @@ class _WeatherPageState extends State<WeatherPage> {
     );
   }
 }
+
