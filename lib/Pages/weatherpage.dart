@@ -8,7 +8,7 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  List<String> cities = ['New York', 'London', 'Tokyo', 'Sydney'];
+  List<String> weather_options = ['Temperature', 'Humidity', 'Wind Gust', 'Precipitation'];
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +16,6 @@ class _WeatherPageState extends State<WeatherPage> {
       body: ReorderableListView(
         padding: const EdgeInsets.all(30),
         children: [
-          /* for (final city in cities)
-            ListTile(
-              key: ValueKey(city), // Unique key is required
-              title: Text(city),
-              // leading: const Icon(Icons.drag_handle),
-            ), */
           Image.asset(
             'assets/sun.png',
             key: const ValueKey('sun'),
@@ -47,14 +41,23 @@ class _WeatherPageState extends State<WeatherPage> {
             ),
           ),
 
-        //stuff here
+          for (final city in weather_options)
+            ListTile(
+              key: ValueKey(city), // Unique key is required
+              title: Text(city),
+              tileColor: Colors.green.shade50,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(40)
+              ),
+              // leading: const Icon(Icons.drag_handle),
+            ),
 
         ],
         onReorder: (oldIndex, newIndex) {
           setState(() {
             if (newIndex > oldIndex) newIndex -= 1;
-            final item = cities.removeAt(oldIndex);
-            cities.insert(newIndex, item);
+            final item = weather_options.removeAt(oldIndex);
+            weather_options.insert(newIndex, item);
           });
         },
       ),
