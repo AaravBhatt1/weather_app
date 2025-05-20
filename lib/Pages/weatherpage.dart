@@ -8,12 +8,10 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  List<String> weather_options = ['Temperature', 'Humidity', 'Wind Gust', 'Precipitation'];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ReorderableListView(
+      body: ListView(
         padding: const EdgeInsets.all(30),
         children: [
           Image.asset(
@@ -41,25 +39,14 @@ class _WeatherPageState extends State<WeatherPage> {
             ),
           ),
 
-          for (final city in weather_options)
-            ListTile(
-              key: ValueKey(city), // Unique key is required
-              title: Text(city),
-              tileColor: Colors.green.shade50,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(40)
-              ),
-              // leading: const Icon(Icons.drag_handle),
-            ),
+          Container(height: 250, color: Colors.blue,  margin: const EdgeInsets.all(16)),
+          Container(height: 250, color: Colors.pink, margin: const EdgeInsets.all(16)),
+          Container(height: 250, color: Colors.yellow, margin: const EdgeInsets.all(16)),
+          Container(height: 250, color: Colors.red, margin: const EdgeInsets.all(16)),
+
 
         ],
-        onReorder: (oldIndex, newIndex) {
-          setState(() {
-            if (newIndex > oldIndex) newIndex -= 1;
-            final item = weather_options.removeAt(oldIndex);
-            weather_options.insert(newIndex, item);
-          });
-        },
+
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
