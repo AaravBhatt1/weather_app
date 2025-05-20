@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'dart:convert';
 
-class PlantEntry {
-  final String name;
-  final String img;
-  final String family;
+part 'plant.g.dart';
+part 'plant.freezed.dart';
 
-  PlantEntry({required this.name, required this.img, required this.family});
+@freezed
+@HiveType(typeId: 0)
+class PlantEntry extends HiveObject with _$PlantEntry {
+  
+  factory PlantEntry({
+    @HiveField(0) required String name,
+    @HiveField(1) required String img,
+    @HiveField(2) required String family,
+  }) = _PlantEntry;
+  
+  factory PlantEntry.fromJson(Map<String, dynamic> json) => _$PlantEntryFromJson(json);
 }
 
 final List<PlantEntry> plants = [
@@ -15,3 +27,18 @@ final List<PlantEntry> plants = [
   PlantEntry(name: 'Spider Plant', img: "https://media.houseandgarden.co.uk/photos/66e02c4143ff56cb528fe5b6/master/w_1600%2Cc_limit/08-01-24-HG-Crisp242.jpg", family: "Asparagaceae"),
   PlantEntry(name: 'Peace Lily', img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQikKQzzOVUljg7EapNRaVLxBVfTOBSsuchbWADXI1t4eVtXMOAOQCyjgwlbVqew9-aFQZcZ_qmlK6hkvwHIif7IQ", family: "Araceae",),
 ];
+
+List<PlantEntry> loadPlants() {
+  final box = Hive.box<PlantEntry>('plants');
+  return box.values.toList();
+}
+
+Future<void> importPlantsFromJson() async {
+  final box = await Hive.openBox<PlantEntry>('plants');
+  final String jsonString = await rootBundle.loadString('assets/plants.json');
+  final List<dynamic> jsonList = json.decode(jsonString);
+
+  final plants = jsonList.map((json) => PlantEntry.fromJson(json)).toList();
+
+  await box.addAll(plants);
+}

@@ -47,7 +47,6 @@ class _WeatherPageState extends State<WeatherPage> {
                       ),
                     ),
 
-
                     //TODO: replace 'DEG' with the current temperature
                     Text(
                       'DEG',
