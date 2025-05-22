@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/Pages/plantspage.dart';
 import 'package:weather_app/Pages/weatherpage.dart';
 import 'package:weather_app/Widgets/searchbar.dart';
+import 'plantspage.dart';
+import 'settingspage.dart';
 
 class PageNavigation extends StatefulWidget {
   const PageNavigation({super.key});
@@ -20,7 +21,7 @@ class _PageNavigationState extends State<PageNavigation> {
   final List<Widget> pages = const [
     WeatherPage(),
     PlantPage(),
-    Placeholder()
+    SettingsPage()
   ];
 
 
