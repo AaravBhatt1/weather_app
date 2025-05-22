@@ -10,6 +10,9 @@
 .svn/
 migrate_working_dir/
 
+# API Key
+lib/api_key.dart
+
 # other metadata
 .metadata
 pubspec.lock
