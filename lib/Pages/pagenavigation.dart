@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/Pages/plantspage.dart';
 import 'package:weather_app/Pages/weatherpage.dart';
 import 'package:weather_app/Widgets/searchbar.dart';
 
@@ -13,12 +14,12 @@ class _PageNavigationState extends State<PageNavigation> {
   int pageIndex = 0;
   List<NavigationDestination> navBarDestinations = const [
     NavigationDestination(icon: Icon(Icons.cloud), label: "Weather"),
-    NavigationDestination(icon: Icon(Icons.energy_savings_leaf), label: "My Plants"), // TODO: Add badges
+    NavigationDestination(icon: Icon(Icons.notifications), label: "My Plants"), // TODO: Add badges
     NavigationDestination(icon: Icon(Icons.settings), label: "Settings")
   ];
   final List<Widget> pages = const [
     WeatherPage(),
-    Placeholder(),
+    PlantPage(),
     Placeholder()
   ];
 

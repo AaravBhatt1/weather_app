@@ -14,14 +14,14 @@ class _WeatherPageState extends State<WeatherPage> {
       body: ListView(
         padding: const EdgeInsets.all(30),
         children: [
-          Image.asset(
-            'assets/sun.png',
-            key: const ValueKey('sun'),
-            width: 150,
-            height: 150,
-            fit: BoxFit.contain,
-          ),
-          const SizedBox(height: 20, key: ValueKey('box1')),
+//          Image.asset(
+//            'assets/sun.png',
+//            key: const ValueKey('sun'),
+//            width: 150,
+//            height: 150,
+//            fit: BoxFit.contain,
+//          ),
+//          const SizedBox(height: 20, key: ValueKey('box1')),
           const Text(
             'Welcome to the Weather App!',
             key: ValueKey('text1'),
