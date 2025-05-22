@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Abstract/plant.dart';
 import 'Pages/pagenavigation.dart';
-
+import 'package:weather_app/preferences.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:provider/provider.dart';
+import 'Pages/settingspage.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  
+  await Hive.openBox('preferences');
   // Initialize Hive
   await Hive.initFlutter();
   Hive.registerAdapter(PlantEntryAdapter());
   await importPlantsFromJson();
 
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider<Preferences>(
+      create: (_) => Preferences(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -22,6 +29,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    /*
     return MaterialApp(
       title: 'Weather App',
       theme: ThemeData(
@@ -34,6 +42,16 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
+      home: const PageNavigation(),
+    );
+    */
+    return MaterialApp(
+      title: 'Weather App',
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: context.watch<Preferences>().darkMode
+          ? ThemeMode.dark
+          : ThemeMode.light,
       home: const PageNavigation(),
     );
   }
