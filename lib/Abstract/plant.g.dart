@@ -18,6 +18,7 @@ class PlantEntryAdapter extends TypeAdapter<PlantEntry> {
     };
     return PlantEntry(
       name: fields[0] as String,
+      image: fields[4] as String,
       type: fields[2] as String,
       description: fields[1] as String,
       activities: (fields[3] as Map).map((dynamic k, dynamic v) =>
@@ -28,9 +29,11 @@ class PlantEntryAdapter extends TypeAdapter<PlantEntry> {
   @override
   void write(BinaryWriter writer, PlantEntry obj) {
     writer
-      ..writeByte(4)
+      ..writeByte(5)
       ..writeByte(0)
       ..write(obj.name)
+      ..writeByte(4)
+      ..write(obj.image)
       ..writeByte(2)
       ..write(obj.type)
       ..writeByte(1)
@@ -57,6 +60,7 @@ class PlantEntryAdapter extends TypeAdapter<PlantEntry> {
 _$PlantEntryImpl _$$PlantEntryImplFromJson(Map<String, dynamic> json) =>
     _$PlantEntryImpl(
       name: json['name'] as String,
+      image: json['image'] as String,
       type: json['type'] as String,
       description: json['description'] as String,
       activities: (json['activities'] as Map<String, dynamic>).map(
@@ -68,6 +72,7 @@ _$PlantEntryImpl _$$PlantEntryImplFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$PlantEntryImplToJson(_$PlantEntryImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
+      'image': instance.image,
       'type': instance.type,
       'description': instance.description,
       'activities': instance.activities,
