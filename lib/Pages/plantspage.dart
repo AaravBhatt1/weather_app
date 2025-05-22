@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Abstract/plant.dart';
+import '../Pages/plantpage.dart';
 
 List<PlantEntry> testPlants = loadPlants();
 
@@ -21,7 +22,17 @@ class _PlantsPageState extends State<PlantsPage> {
         children: [
           for (final plant in userPlants)
             ExpansionTile(
-              title: Text(plant.name),
+              title: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PlantPage(plantEntry: plant),
+                    ),
+                  );
+                },
+                child: Text(plant.name),
+              ),
               children: const [
                 Text("Test")
               ],
