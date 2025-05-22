@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Pages/weatherpage.dart';
+import 'package:weather_app/Pages/settingspage.dart';
 import 'package:weather_app/Widgets/searchbar.dart';
 import 'plantspage.dart';
 import 'settingspage.dart';
