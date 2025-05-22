@@ -39,8 +39,8 @@ class _WeatherPageState extends State<WeatherPage> {
                       Image.asset(
                         'assets/sun.png',
                         key: const ValueKey('sun'),
-                        width: 100,
-                        height: 100,
+                        width: 150,
+                        height: 150,
                         fit: BoxFit.contain,
                       ),
                       const SizedBox(width: 16),
@@ -49,20 +49,20 @@ class _WeatherPageState extends State<WeatherPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Welcome to the Weather App!',
+                              'CAMBRIDGE',
                               key: ValueKey('text1'),
                               style: TextStyle(
-                                fontSize: 24,
+                                fontSize: 30,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             SizedBox(height: 10, key: ValueKey('box2')),
                             Text(
-                              'Search and get your forecast instantly.',
+                              '23°C',
                               key: ValueKey('text2'),
                               style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.grey,
+                                fontSize: 80,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
@@ -102,6 +102,7 @@ class _WeatherPageState extends State<WeatherPage> {
           );
         }
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           final restored = await Navigator.push(
