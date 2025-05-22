@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+
 class DeletableCard extends StatefulWidget {
   final Color color;
   final String label;
+  final double height;
   final VoidCallback onDelete;
 
   const DeletableCard({
@@ -11,6 +13,7 @@ class DeletableCard extends StatefulWidget {
     required this.color,
     required this.label,
     required this.onDelete,
+    this.height = 200 // default height of 200
   });
 
   @override
@@ -73,13 +76,13 @@ class _DeletableCardState extends State<DeletableCard>
           children: [
             Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(40),
               ),
               elevation: 4,
               color: widget.color,
               margin: const EdgeInsets.symmetric(vertical: 12),
               child: SizedBox(
-                height: 200,
+                height: widget.height,
                 child: Center(
                   child: Text(
                     widget.label,
