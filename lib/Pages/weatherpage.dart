@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/Widgets/apibuilder.dart';
 import 'RestorePage.dart';
 import 'dart:math';
 
@@ -25,77 +26,81 @@ class _WeatherPageState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image.asset(
-                    'assets/sun.png',
-                    key: const ValueKey('sun'),
-                    width: 100,
-                    height: 100,
-                    fit: BoxFit.contain,
-                  ),
-                  const SizedBox(width: 16),
-                  const Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Welcome to the Weather App!',
-                          key: ValueKey('text1'),
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                          ),
+      body: ApiBuilder(
+        builder: (context, data) {
+          return SafeArea(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        'assets/sun.png',
+                        key: const ValueKey('sun'),
+                        width: 100,
+                        height: 100,
+                        fit: BoxFit.contain,
+                      ),
+                      const SizedBox(width: 16),
+                      const Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Welcome to the Weather App!',
+                              key: ValueKey('text1'),
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 10, key: ValueKey('box2')),
+                            Text(
+                              'Search and get your forecast instantly.',
+                              key: ValueKey('text2'),
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
                         ),
-                        SizedBox(height: 10, key: ValueKey('box2')),
-                        Text(
-                          'Search and get your forecast instantly.',
-                          key: ValueKey('text2'),
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ),
+                ),
 
-            Expanded(
-              child: ReorderableListView(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
-                onReorder: (oldIndex, newIndex) {
-                  setState(() {
-                    final item = items.removeAt(oldIndex);
-                    items.insert(newIndex > oldIndex ? newIndex - 1 : newIndex, item);
-                  });
-                },
-                children: [
-                  for (var item in items)
-                    DeletableCard(
-                      key: ValueKey(item['key']),
-                      color: item['color'],
-                      label: item['label'],
-                      onDelete: () {
-                        setState(() {
-                          unseenItems.add(item);
-                          items.removeWhere((i) => i['key'] == item['key']);
-                        });
-                      },
-                    ),
-                ],
-              ),
+                Expanded(
+                  child: ReorderableListView(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    onReorder: (oldIndex, newIndex) {
+                      setState(() {
+                        final item = items.removeAt(oldIndex);
+                        items.insert(newIndex > oldIndex ? newIndex - 1 : newIndex, item);
+                      });
+                    },
+                    children: [
+                      for (var item in items)
+                        DeletableCard(
+                          key: ValueKey(item['key']),
+                          color: item['color'],
+                          label: item['label'],
+                          onDelete: () {
+                            setState(() {
+                              unseenItems.add(item);
+                              items.removeWhere((i) => i['key'] == item['key']);
+                            });
+                          },
+                        ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          );
+        }
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {

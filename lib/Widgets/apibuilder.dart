@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class TemperatureTest extends StatelessWidget {
-  const TemperatureTest({super.key, required this.builder});
+class ApiBuilder extends StatelessWidget {
+  const ApiBuilder({super.key, required this.builder});
 
   final Widget Function(BuildContext, Map) builder;
 
@@ -16,7 +16,6 @@ class TemperatureTest extends StatelessWidget {
           builder: (context, future) {
             if (future.hasData) {
               Map data = jsonDecode(future.data!.body);
-              print (data);
               return builder(context, data);
             }
             return const CircularProgressIndicator();
