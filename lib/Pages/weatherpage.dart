@@ -34,6 +34,47 @@ class _WeatherPageState extends State<WeatherPage> {
           });
         },
         children: [
+          
+          Row(
+            key: const ValueKey("row"),
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(
+                'assets/sun.png',
+                key: const ValueKey('sun'),
+                width: 100,
+                height: 100,
+                fit: BoxFit.contain,
+              ),
+              const SizedBox(width: 16), 
+              const Expanded( 
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Welcome to the Weather App!',
+                      key: ValueKey('text1'),
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 10, key: ValueKey('box2')),
+                    Text(
+                      'Search and get your forecast instantly.',
+                      key: ValueKey('text2'),
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+          /*
           const Image(
             key: ValueKey('sun'),
             image: AssetImage('assets/sun.png'),
@@ -58,7 +99,7 @@ class _WeatherPageState extends State<WeatherPage> {
             'Search and get your forecast instantly.',
             key: ValueKey('subtitle'),
             style: TextStyle(fontSize: 16, color: Colors.grey),
-          ),
+          ), */
 
           for (var item in items)
             DeletableCard(
