@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Abstract/plant.dart';
 
-List<PlantEntry> testPlants = plants;
+List<PlantEntry> testPlants = loadPlants();
 
-class PlantPage extends StatefulWidget {
-  const PlantPage({super.key});
+class PlantsPage extends StatefulWidget {
+  const PlantsPage({super.key});
 
   @override
-  State<PlantPage> createState() => _PlantPageState();
+  State<PlantsPage> createState() => _PlantsPageState();
 }
 
-class _PlantPageState extends State<PlantPage> {
-  final List<PlantEntry> userPlants = plants;
+class _PlantsPageState extends State<PlantsPage> {
+  final List<PlantEntry> userPlants = loadPlants();
 
 
   @override

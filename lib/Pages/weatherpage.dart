@@ -14,7 +14,10 @@ class _WeatherPageState extends State<WeatherPage> {
     {'key': 'blueCard', 'color': Colors.blue, 'label': 'Blue'},
     {'key': 'pinkCard', 'color': Colors.pink, 'label': 'Pink'},
     {'key': 'yellowCard', 'color': Colors.yellow, 'label': 'Yellow'},
-    {'key': 'redCard', 'color': Colors.red, 'label': 'Red'},
+    {'key': 'orangeCard', 'color': Colors.orange, 'label': 'Orange'},
+    {'key': 'greenCard', 'color': Colors.green, 'label': 'Green'},
+    {'key': 'purpleCard', 'color': Colors.purple, 'label': 'Purple'},
+    {'key': 'greyCard', 'color': Colors.grey, 'label': 'Grey'},
   ];
   final List<Map<String, dynamic>> unseenItems = [];
 
@@ -22,57 +25,77 @@ class _WeatherPageState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ReorderableListView(
-        padding: const EdgeInsets.all(30),
-        onReorder: (oldIndex, newIndex) {
-          const staticCount = 4;
-          if (oldIndex < staticCount || newIndex <= staticCount) return;
-
-          setState(() {
-            final item = items.removeAt(oldIndex - staticCount);
-            items.insert(newIndex - staticCount, item);
-          });
-        },
-        children: [
-          const Image(
-            key: ValueKey('sun'),
-            image: AssetImage('assets/sun.png'),
-            width: 150,
-            height: 150,
-            fit: BoxFit.contain,
-          ),
-          const SizedBox(
-            key: ValueKey('spacer1'),
-            height: 20,
-          ),
-          const Text(
-            'Welcome to the Weather App!!',
-            key: ValueKey('welcome'),
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(
-            key: ValueKey('spacer2'),
-            height: 10,
-          ),
-          const Text(
-            'Search and get your forecast instantly.',
-            key: ValueKey('subtitle'),
-            style: TextStyle(fontSize: 16, color: Colors.grey),
-          ),
-
-          for (var item in items)
-            DeletableCard(
-              key: ValueKey(item['key']),
-              color: item['color'],
-              label: item['label'],
-              onDelete: () {
-                setState(() {
-                  unseenItems.add(item);
-                  items.removeWhere((i) => i['key'] == item['key']);
-                });
-              },
+      body: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    'assets/sun.png',
+                    key: const ValueKey('sun'),
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.contain,
+                  ),
+                  const SizedBox(width: 16),
+                  const Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Welcome to the Weather App!',
+                          key: ValueKey('text1'),
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 10, key: ValueKey('box2')),
+                        Text(
+                          'Search and get your forecast instantly.',
+                          key: ValueKey('text2'),
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-        ],
+
+            Expanded(
+              child: ReorderableListView(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                onReorder: (oldIndex, newIndex) {
+                  setState(() {
+                    final item = items.removeAt(oldIndex);
+                    items.insert(newIndex > oldIndex ? newIndex - 1 : newIndex, item);
+                  });
+                },
+                children: [
+                  for (var item in items)
+                    DeletableCard(
+                      key: ValueKey(item['key']),
+                      color: item['color'],
+                      label: item['label'],
+                      onDelete: () {
+                        setState(() {
+                          unseenItems.add(item);
+                          items.removeWhere((i) => i['key'] == item['key']);
+                        });
+                      },
+                    ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
@@ -94,6 +117,8 @@ class _WeatherPageState extends State<WeatherPage> {
       ),
     );
   }
+
+
 }
 
 class DeletableCard extends StatefulWidget {
