@@ -29,9 +29,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    /*
     return MaterialApp(
       title: 'Weather App',
+      darkTheme: ThemeData.dark(),
+      themeMode: context.watch<Preferences>().darkMode
+          ? ThemeMode.dark
+          : ThemeMode.light,
+      // theme: ThemeData.light(),
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.lightGreen,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreen),
@@ -49,16 +53,6 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      home: const PageNavigation(),
-    );
-    */
-    return MaterialApp(
-      title: 'Weather App',
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      themeMode: context.watch<Preferences>().darkMode
-          ? ThemeMode.dark
-          : ThemeMode.light,
       home: const PageNavigation(),
     );
   }
