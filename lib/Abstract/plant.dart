@@ -28,6 +28,7 @@ List<PlantEntry> loadPlants() {
 }
 
 Future<void> importPlantsFromJson() async {
+  await Hive.deleteBoxFromDisk('plants');
   final box = await Hive.openBox<PlantEntry>('plants');
   final String jsonString = await rootBundle.loadString('assets/plants.json');
   final List<dynamic> jsonList = json.decode(jsonString);
