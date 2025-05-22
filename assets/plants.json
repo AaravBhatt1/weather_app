@@ -1,12 +1,1392 @@
 [
-  {
-    "name": "Monstera Deliciosa",
-    "img": "https://florastore.com/cdn/shop/files/1711701_Atmosphere_04_SQ_MJ.jpg?v=1734605508&width=1080",
-    "family": "Araceae"
-  },
-  {
-    "name": "Fiddle Leaf Fig",
-    "img": "https://www.beardsanddaisies.co.uk/cdn/shop/products/BD_H_M_498_5ee4a425-1530-4a0b-bd9a-d93c530eb0ec_720x.jpg?v=1679491111",
-    "family": "Moraceae"
-  }
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Sweet, succulent figs may sound like exotic treats for warmer climes, but if you choose the right variety, you can enjoy home-grown figs in the UK, in a mild, sunny site. In cooler locations, figs can be grown in containers and brought indoors over winter to protect the young fruitlets, or outdoor plants can be covered or wrapped. And with our warming climate, the range of suitable outdoor growing sites is continually expanding.Planted in a warm, sunny site, figs should produce plenty of delicious fruits that ripen by late summerLeft to their own devices, figs (Ficus carica) can grow into large bushy trees, with big hand-shaped leaves that are highly ornamental, bringing a tropical look to gardens. But if you want to maximise cropping, figs are best trained as a fan against a sunny wall and their roots restricted in a large container or with paving slabs inserted vertically around the rootball. Limiting their root-spread reduces their vigorous leafy growth and helps them focus on fruit production. Twice-yearly pruning also keeps these vigorous plants at a manageable size and improves fruiting. The seedless fruits develop withoutA process of sexual reproduction, which occurs after pollination. It can be defined as the fusion of the male gametes (pollen) with the female gametes (ovum).fertilisation(parthenocarpic fruit), soThe transfer of pollen grains from a male anther to a female stigma, either within the same flower or between two different flowers. It\u2019s usually followed by fertilisation and seed production. Some flowers are pollinated by insects or other small creatures, others are wind pollinated. It\u2019s also possible to pollinate flowers by hand, if you want to breed new plants or ensure successful pollination when there are few natural pollinators.pollinationis not need.Figs crop well in containers, either trained as a fan or as a small free-standing bush or tree, so can be grown in even the smallest garden in a warm, sunny spot. Keeping them in a pot is also useful in cooler regions, so they can be moved indoors over winter.In the cool UK climate, figs produce two crops a year, but only the first one usually ripens:\nA process of sexual reproduction, which occurs after pollination. It can be defined as the fusion of the male gametes (pollen) with the female gametes (ovum).\nThe transfer of pollen grains from a male anther to a female stigma, either within the same flower or between two different flowers. It\u2019s usually followed by fertilisation and seed production. Some flowers are pollinated by insects or other small creatures, others are wind pollinated. It\u2019s also possible to pollinate flowers by hand, if you want to breed new plants or ensure successful pollination when there are few natural pollinators.\nThe first cropis produced from embryonic figs that start to form in late summer\u00a0at the branch tips. They stay as pea-sizeAn immature fruit, usually small.fruitletsuntil\u00a0spring, then start into growth and ripen over summer. As the fruitlets form at the shoot tips, they are prone to frost damage, so winter protection is beneficial\nAn immature fruit, usually small.\nThe second cropforms on the current season\u2019s shoots later in spring and early summer. These fruit rarely have time to ripen outdoors. They may reach a reasonable size, but will remain hard and green, so\u00a0are\u00a0best removed at the end of summer\nFig trees can also be grown in a greenhouse all year round, where they may possibly ripen both crops in a good summer.",
+        "type": "fruit",
+        "name": "figs"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Damson trees are easy to grow and produce heavy crops of small, juicy, blue-black fruits in late summer, as well as pretty blossom in early spring. The fruits are slightly astringent, with smooth, yellow-green flesh, and have a rich flavour ideal for many culinary uses, but particularly for jams and preserves.Damsons are smaller and less sweet than plums, but ideal for making into deliciously rich jams and dessertsDamsons (Prunusinsititia) are closely related toplums(Prunusdomestica) and\u00a0have been grown in Britain since at least Roman times. Traditional damson-growing regions include Shropshire, Kent, Worcestershire, Westmorland (Cumbria) and Cheshire, where they were once grown in vast orchards. Some of the old regional varieties are still available, as well as several more recently bred options.The trees are simple to plant and like a warm, sunny spot with fertile soil that doesn\u2019t get waterlogged. If you don\u2019t have space for a free-standing tree, you can grow a fan-trained tree flat against a wall or fence, or a tree grafted on a dwarfing rootstock in a large container. In larger gardens, they make a great addition to a wildlife-friendlyhedgerowand are tough enough to act as awindbreak. Bees and other pollinators enjoy the blossom\u2019s sweet nectar in spring.Damsons need little maintenance apart from annual pruning to keep them in good shape, and will reward you with plentiful harvests for years to come.",
+        "type": "fruit",
+        "name": "damsons"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Melons are tender trailing plants that need lots of summer warmth to produce their sweet, juicy, aromatic fruits. They\u2019re best grown in a greenhouse, although a few varieties may fruit outdoors in very warm locations or under cloches.If you fancy a challenge, why not give melons a try \u2013 you could get some delicious resultsMelons are not the easiest fruits to grow in the UK, especially outdoors, as they need heat,The concentration of water vapour in the atmosphere. This affects the rate at which plants transpire (lose water from their leaf pores), which in turn affects how much water their roots absorb from the soil. If air humidity is low, plants transpire quickly and become at risk of wilting if water is lost from the leaves faster than it can be absorbed by the roots. Different plants require different levels of humidity to thrive. Many tropical houseplants need high humidity and are best grown in a steamy bathroom, misted regularly or placed on a saucer of damp pebbles. In a greenhouse, humidity can be raised in hot weather by damping down (wetting) the floor or overhead misting.humidityand consistent moisture. Growing in a greenhouse or polytunnel is the best option and, if you look after them well, you may get up to six fruit per plant. Growing them outdoors is much more risky, even in a really warm, sheltered spot, although protective cloches should help.Melons (Cucumis melo) are closely related tocucumbersand have a similar style of growth, with vigorous scrambling stems, large leaves, yellow flowers and clinging tendrils. In a greenhouse they are usually grown up supports to save space.Two main types of sweet melons can be grown in the UK:\nThe concentration of water vapour in the atmosphere. This affects the rate at which plants transpire (lose water from their leaf pores), which in turn affects how much water their roots absorb from the soil. If air humidity is low, plants transpire quickly and become at risk of wilting if water is lost from the leaves faster than it can be absorbed by the roots. Different plants require different levels of humidity to thrive. Many tropical houseplants need high humidity and are best grown in a steamy bathroom, misted regularly or placed on a saucer of damp pebbles. In a greenhouse, humidity can be raised in hot weather by damping down (wetting) the floor or overhead misting.\nCantaloupe melons, with aromatic orange flesh \u2013 these are the best choice for growing outdoors but will do even better in a greenhouse\nHoneydew melons, smooth-skinned, with firm yellow flesh \u2013 best grown in a greenhouse\nWith good growing conditions and regular care, one melon plant should produce several fruit by late summer, giving you not only delicious rewards but a big sense of achievement too.",
+        "type": "fruit",
+        "name": "melons"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Growing in a warm, sheltered spot, cherry trees fruit abundantly every summerWith their delicious juicy fruits, pretty spring blossom and bright autumn foliage, cherry trees are an asset to any garden. Producing either sweet cherries for eating fresh or acid cherries for cooking, the\u00a0trees\u00a0come\u00a0in various sizes to suit most gardens \u2013 if space is tight, you can grow a fan-trained\u00a0cherry flat against a wall or fence, or even a dwarf tree in a large container.Cherries are closely related toplums,peaches,nectarinesandapricotsand enjoy similar growing conditions: namely fertile soil that doesn\u2019t getDescribes soil or potting compost that is saturated with water. The water displaces air from the spaces between soil particles and plant roots can literally drown, unless they are adapted to growing in waterlogged conditions. Waterlogging is common on poorly drained soil or when heavy soil is compacted.waterloggedor dry out for long spells. For the sweetest fruits, plant in a sunny spot, although acid cherries (for cooking) will also crop well in partial shade. Many modern varieties are self-fertile, which means you only need one tree\u00a0for a good crop. Just bear in mind that birds love cherries, so it\u2019s best to net the tree or grow it in a fruit cage if you want the whole crop for yourself.\u00a0To keep cherry trees in good shape and fruiting well, prune annually.\nDescribes soil or potting compost that is saturated with water. The water displaces air from the spaces between soil particles and plant roots can literally drown, unless they are adapted to growing in waterlogged conditions. Waterlogging is common on poorly drained soil or when heavy soil is compacted.",
+        "type": "fruit",
+        "name": "cherries"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant Out": [
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "",
+        "type": "fruit",
+        "name": "mulberries"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Olives are drought-tolerant evergreen trees with shimmering silvery foliage that love to bask in a warm, sunny and sheltered position. Whether you grow them in the ground or in a large container, they will add an instant touch of the Mediterranean and may sometimes in hot summers and southern gardens, reward you with a crop of attractive-looking fruit that need special preparation to make them edible.",
+        "type": "fruit",
+        "name": "olives"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Grow blueberries in a sunny spot and protect the crop from birdsBlueberries (Vaccinium)are small to medium-sized shrubs that make a decorative and productive addition to any garden. They produce small white bell-like flowers in spring, followed by succulent, dusky blue fruits in summer, and in autumn the leaves often turn attractive shades of yellow, red and purple.The main thing to remember is that blueberries need acid soil, with aThis describes how acid or alkaline soil is, and is expressed as a number between 0 and 14. Soil with a pH of 7 is neutral, an acid soil has a lower value, and an alkaline soil has a higher one. Most plants grow best in soil that\u2019s within a specific pH range, so it\u2019s useful to know your soil\u2019s pH. Testing kits are easy to use and widely available in garden centres and online.pHof 4.5\u20135.5 \u2013 if you can grow azaleas, rhododendrons and camellias in your garden, blueberries should be successful too. Test your soil pH if you\u2019re unsure \u2013 easy-to-use kits are widely available in garden centres and online. If your soil is unsuitable, simply grow blueberries in large pots of ericaceous (acidic) compost. See ourguide to soil pH.Blueberries like lots of sun and moist soil, so don\u2019t let them dry out during the growing season, especially while flowering and fruiting. Birds love the berries too, so once they\u00a0start to ripen, protect them with netting, or grow plants in afruit cage.\nThis describes how acid or alkaline soil is, and is expressed as a number between 0 and 14. Soil with a pH of 7 is neutral, an acid soil has a lower value, and an alkaline soil has a higher one. Most plants grow best in soil that\u2019s within a specific pH range, so it\u2019s useful to know your soil\u2019s pH. Testing kits are easy to use and widely available in garden centres and online.",
+        "type": "fruit",
+        "name": "blueberries"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Biting into a succulent, perfectly ripe pear is one of the joys of autumn. You may be lucky enough to have a tree in your garden already, but if not, they\u2019re easy to plant and you can even grow compact trees\u00a0in containers.Pears are ready to harvest in late summer and autumn, depending on the varietyPear trees announce the arrival of spring with a froth of joyful blossom, then\u00a0the young fruits swell as the weather warms, to provide a plentiful harvest of sweet succulent pears from late summer into autumn. Suitable for every size of garden, large or small, pears can be grown either as free-standing trees or trained against a wall\u00a0to take up barely any ground space. Compact varieties and trees grafted on a dwarfing rootstock can be grown in a large container.Young pear trees are very easy to plant and like a warm, sunny, sheltered spot in fertile soil that drains freely. There are many varieties to choose from, producing fruit of different shapes, colours, flavours and textures. Pear trees need little maintenance once established, although it\u2019s beneficial to prune them annually to keep them in good shape and fruiting well. The fruit should be harvested just before it\u2019s ripe and brought indoors to complete the ripening process, which can take a month or more depending on the variety. This means you can enjoy your harvest gradually, savouring each sweet juicy fruit as it reaches perfection.",
+        "type": "fruit",
+        "name": "pears"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant Out": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Grapes are becoming much more widely grown in the UK, with vineyards appearing on sunny hillsides in warmer regions, producing many award-winning wines. Grapevines(Vitis\u00a0vinifera) also make an attractive feature in gardens, but for a successful crop of ripe grapes, they need a particularly warm, sheltered, sunny location or the protection of a greenhouse. Still, with our warming climate, the range of growing sites is ever expanding.Planted in a warm, sunny location and pruned regularly, grapevines can produce a large cropGrape varieties are classified as either wine or dessert grapes, although there is some overlap. Wine varieties tend to ripen more reliably than dessert types in the UK, but are not usually too good for eating. There are also a few dessert varieties that will crop outdoors in very warm, sunny spots, usually in southern England. Both types can also be grown in a greenhouse, where their grapes will ripen much more reliably.Grapevines are fast-growing climbing plants that need plenty of space. They will happily scramble overpergolasand arches, or can be trained along horizontal wires attached to sunny walls, fences, sturdy posts or the internal framework of a greenhouse. To get the best crop, vines need regular attention throughout the growing season, including careful pruning, training and fruit thinning.Related RHS GuidesFascinating facts about grapes",
+        "type": "fruit",
+        "name": "grapes"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Harvest medlars in autumn, then store them until they become softer and sweeterMedlar trees (Mespilus germanica) are easy to grow, productive, generally problem-free and need little pruning. They produce large white flowers in late spring, followed by small rounded fruits (about 5cm/2in across) for picking in autumn, and fiery-tinted autumn foliage.Medlar fruits are a curious delicacy, popular in medieval times but now not widely grown. Harvested in autumn when usually still hard, bitter and unripe, the small golden-brown fruits need to be stored for several weeks to ripen (or blet) until they are dark brown, soft, sweet and aromatic. They can then either be eaten (traditionally with cheese and port) or, more popularly, used to make afragrant amber jellyto accompany rich meats. They can also be used in sweet desserts.\u00a0Medlar fruits are very rarely available to buy, although you may sometimes find medlar jelly, so the best way to enjoy these unusual fruits is to grow your own.Related RHS GuidesFascinating facts about medlars",
+        "type": "fruit",
+        "name": "medlars"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Endive is a compact, lettuce-like plant, harvested either as young salad leavesor mature heads. The leaves have a bitter flavour, so are traditionally blanched to make them milder and more tender. They\u2019re ideal for pepping up a mixed salad.Use fris\u00e9e varieties of endive, such as \u2018Wallone\u2019, as baby salad leaves or whole headsEndive is grown in a similar way to other leafy salad crops such aslettucesandchicory, in the ground or in containers. It is easiest and quickest as acut-and-come-again cropas\u00a0plants take up little space and you can start harvesting leaves in as little as a month, usually making two or more pickings before they start to flower\u00a0and need replacing.\u00a0Mature heads are slower growing and larger, taking around three months to mature. Sowing seeds little and often can provide you with steady harvests from late spring right through into winter.",
+        "type": "vegetable",
+        "name": "endive"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "With their colourful fruits, sweet peppers are a vibrant and attractive crop. Also known as bell peppers or pointed peppers, depending on the fruit shape, these tender plants are best grown in a greenhouse, but can also be planted outdoors in a sunny spot, in pots or in the ground.Peppers can be picked at any stage \u2013 when green and crunchy or when riper and sweeterSweet peppers (Capsicum)\u00a0are tender and need lots of sun and consistent warmth\u00a0to crop well, so are usually\u00a0grown under cover in the UK, in a greenhouse, polytunnel, conservatory orcoldframe. They are only really successful outdoors in milder parts of the country or in long, hot summers, and benefit greatly fromAclocheis a\u00a0 small, portable, protective structure made of glass or rigid transparent plastic used to protect plants, especially overwintered and early vegetables, from wet and cold weather and to warm the soil before planting.Read moreclocheorA soft, fibrous, translucent material laid over or around plants hastening their growth and protecting them against weather and pests. Heavier grades of fleece give about 2\u00b0C of protection from frost. It is usually used without supporting hoops.fleeceprotection. Wherever you\u2019re ultimately going to grow them, they need to be sown in warmth indoors, from late winter to early spring.Closely related to chillies, they make attractive plants with their colourful, glossy fruits, which ripen from mid-summer to early autumn. They also take up little space, usually reaching only about 60cm (2ft) tall and 30cm (1ft) wide, and grow well in large pots.Related RHS GuidesGrowing veg in containersGrowing veg in greenhouses\nAclocheis a\u00a0 small, portable, protective structure made of glass or rigid transparent plastic used to protect plants, especially overwintered and early vegetables, from wet and cold weather and to warm the soil before planting.\nRead more\nA soft, fibrous, translucent material laid over or around plants hastening their growth and protecting them against weather and pests. Heavier grades of fleece give about 2\u00b0C of protection from frost. It is usually used without supporting hoops.",
+        "type": "vegetable",
+        "name": "peppers"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                true,
+                true,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Salad onions, or spring onions, are easy to grow and take up little space, so can fit into even the smallest garden and grow well in containers too. Sow little and often, for quick harvests all summer, or make a larger sowing of a variety that has a long cropping season. Salad onions are delicious raw in salads or cooked in stir-fries.",
+        "type": "vegetable",
+        "name": "salad-onions"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Shallots are easy to grow from immatureThese are fleshy, rounded, underground storage organs, usually sold and planted while dormant. Examples include daffodils, tulips, hyacinths, lilies, onions and garlic. The term is often used to cover other underground storage organs, including corms, tubers and rhizomes.bulbsknown as sets, and can also be grown from seed. Planted in a warm sunny location,\u00a0they\u2019ll produce a good crop of sweet, tangy bulbs that can be stored for many months.Smaller, milder and sweeter than most onions, shallots are an easy crop for a sunny siteShallots (AlliumcepaAggregatum Group)\u00a0are a type of small, sweet onion, and are just as\u00a0easy to grow, with a similar need for full sun and free-draining soil. To grow\u00a0from sets (immature bulbs), plant\u00a0outdoors in autumn or spring, and they\u2019ll produce a cluster of new bulbs to harvest from early summer onwards. They can also be grown from seed, which takes a little more time and effort, and produces a single bulb each.\nThese are fleshy, rounded, underground storage organs, usually sold and planted while dormant. Examples include daffodils, tulips, hyacinths, lilies, onions and garlic. The term is often used to cover other underground storage organs, including corms, tubers and rhizomes.",
+        "type": "vegetable",
+        "name": "shallots"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Cherry tomatoes are sweet and delicious, especially when harvested from your own plantsTomatoes are one of the most popular crops to grow \u2013 they can be started from seed indoors or bought as young plants, then grown either outdoors or in a greenhouse, in pots or in the ground. They grow particularly well in a greenhouse, usually producing an earlier and larger crop. When grown outdoors, these tender plants need a warm, sunny, sheltered site. Botanically known asSolanum lycopersicum, tomatoes are closely related to potatoes, and are similarly susceptible toblightdisease outdoors, but rarely in a greenhouse.Tomatoes do need some attention to grow well, including protection from frost, and regular watering and feeding. But they\u2019re well worth the effort when you can eat your own home-grown tomatoes all summer long, freshly picked, warmed by the sun, and at their sweetest, juiciest best.There\u2019s an enormous range of varieties to choose from, which is another great benefit of growing your own. There are fruits of different sizes, colours, textures and flavours, to suit all tastes \u2013 far more choice than you get in the supermarket. There are plants of various sizes too, for different growing locations and amounts of space, from tall and vigorousA plant that is restricted by pruning to usually one main stem, either upright or at a 45 degree angle, with short fruiting side-shoots (spurs). Apples, pears, gooseberries, tomatoes, redcurrants and whitecurrants are often grown ascordons, especially where space is limited. Sweet peas can be grown ascordonsto produce large flowers for exhibition.cordonvarieties to more compact bush types, as well as dwarf varieties for small containers and even trailing plants for hanging baskets. Small-fruited varieties tend to be the easiest to grow, fastest to fruit and most prolific, but it\u2019s well worth experimenting with all the different types.\nA plant that is restricted by pruning to usually one main stem, either upright or at a 45 degree angle, with short fruiting side-shoots (spurs). Apples, pears, gooseberries, tomatoes, redcurrants and whitecurrants are often grown ascordons, especially where space is limited. Sweet peas can be grown ascordonsto produce large flowers for exhibition.",
+        "type": "vegetable",
+        "name": "tomatoes"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Florence fennel is an attractive plant that forms a white \u2018bulb\u2019 at ground level made up of the overlapping, swollen bases of the leaf stalks. This has a sweet, mild aniseed flavour. It is also known as bulb fennel, although botanically it\u2019s not a true bulb.Florence fennel (Foeniculum vulgare var. azoricum) is very closely related to the herbcommon fennel(F. vulgare)\u2013 for more on growing the latter, see ourguide to growing herb fennel.As Florence fennelThese are fleshy, rounded, underground storage organs, usually sold and planted while dormant. Examples include daffodils, tulips, hyacinths, lilies, onions and garlic. The term is often used to cover other underground storage organs, including corms, tubers and rhizomes.bulbsare fairly expensive to buy, it\u2019s a prized crop to grow. However, it can be tricky, easilybolting(flowering), which means the bulb either doesn\u2019t form or turns woody and inedible. It fares best in warm, damp summers and is well worth the effort if you can give it the right conditions. It may be less successful in colder regions and heavy clay soil.The key to success is to provide regular water, never letting the soil dry out, so plants keep growing strongly. Early to mid-summer is the best time to sow, once temperatures have warmed up. The bulbs take three or four months to mature, but you can harvest at any size \u2013baby bulbscan be enjoyed after only about six weeks. Fennel bulbs can be eaten raw, sliced or grated into salads, or cooked in all kinds of dishes. The young feathery leaves can also be used as a flavouring.Florence fennel is a handsome, upright plant that takes up little ground space, so is ideal for small gardens and containers, as well as open ground. With its green feathery foliage, it\u2019s ornamental as well as edible, making an attractive feature in any garden.\nThese are fleshy, rounded, underground storage organs, usually sold and planted while dormant. Examples include daffodils, tulips, hyacinths, lilies, onions and garlic. The term is often used to cover other underground storage organs, including corms, tubers and rhizomes.",
+        "type": "vegetable",
+        "name": "florence-fennel"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+            ]
+        },
+        "image": null,
+        "description": "Jerusalem artichokes are easy to grow and need little maintenance. They are tall plants that produce a prolific crop of underground tubers\u00a0for harvesting in late autumn and winter. They can also be grown in large containers if you\u2019re short on ground space.Jerusalem artichokes provide a bounty of buried treasure, yet are low maintenance to growJerusalem artichokes(Helianthus tuberosus)are grown from tubers rather than seeds, in a similar way to potatoes, yet unlike potatoes they are very hardy. Plant them outdoors in late winter or spring and they\u2019ll grow into tall, vigorous flowering plants. Underground, they produce a plentiful supply of new\u00a0tubers that are ready to\u00a0harvest from late autumn onwards. These can be dug up right through winter, whenever you need them. And if you leave a few\u00a0in the ground, either on purpose or by accident, they\u2019ll sprout in spring and provide a crop by the autumn.Despite their name, Jerusalem artichokes aren\u2019t from the Middle East, but from North America, and aren\u2019t related to globe artichokes. Instead, they\u2019re a relative of thesunflowerand produce characteristic yellow flowers at the top of their tall stems. The name Jerusalem is thought to be derived from the Italian for sunflower,girasole. They are often known as sunchokes in the US, although they will also crop in partial shade.As Jerusalem artichokes are relatively expensive to buy in the shops, but extremely easy to grow, they\u2019re a useful and cost-effective crop. They can be dug up over a long period,\u00a0after many other crops have finished, providing valuable winter harvests.",
+        "type": "vegetable",
+        "name": "jerusalem-artichokes"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+            ]
+        },
+        "image": null,
+        "description": "Hardy, robust and slow growing, Brussels sprouts\u00a0are a classic winter vegetable, providing fresh, nutritious harvests in even the coldest weather. With modern varieties offering much improved flavour, this versatile veg has seen a revival in popularity and is now used in a wide range of dishes, not just the traditional festive feast.Brussels sprouts will provide you with fresh, tasty harvests for Christmas and beyondSlow but relatively easy to grow, Brussels sprouts provide valuable harvests through the leaner winter months. A member of the brassica (cabbage) family, they are very hardy and crop well through even the coldest winters. In fact, sprouts have the sweetest flavour when harvested after being frosted.Brussels sprouts (Brassica oleracea(Gemmifera Group)) form large, quirky-looking plants\u00a0about 90cm\u00a0(3ft) tall, with a leafy top and sturdy stem covered in small rounded sprouts. This crop is slow to mature \u2013 sown from early spring onwards, it\u2019s\u00a0ready to harvest from autumn to late winter, depending on the variety and sowing time. While plants do take up quite a lot of space for a large part of the year, you don\u2019t need many, as they should crop well, providing valuable fresh harvests across the winter months.So why not try growing your own sprouts for a Christmas Day treat? Modern varieties have a mild, nutty, sweet flavour \u2013 far better than you may remember from childhood. Freshly picked sprouts are also full of health-boosting nutrients. Enjoy them lightly steamed, saut\u00e9ed or stir-fried in all kinds of dishes.Related RHS GuidesHardy winter vegetablesFascinating facts about Brussels sprouts",
+        "type": "vegetable",
+        "name": "brussels-sprouts"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "A member of the onion family, this staple of Mediterranean cooking is simple to grow in a warm sunny site with well-drained soil. It\u2019s grown from cloves, which are best planted in late autumn, and is ready to harvest the following summer.Garlic is usually planted in autumn, for harvesting in early summerHardy, sun-loving garlic is an increasingly popular crop, as it needs minimal maintenance, takes up relatively little space and produces reliable harvests. Started off from cloves rather than seed, it needs no cosseting. In fact, it usually requires a spell of cold to form a good bulb, so is generally planted in late autumn to overwinter outdoors.Simply keep weeds at bay and water in dry spells, and you\u2019ll be harvesting your own garlic\u00a0from early summer onwards, depending on the variety. Garlic stores well for several months, so you can grow plenty to use as needed, and benefit from garlic\u2019s many health-boosting properties.",
+        "type": "vegetable",
+        "name": "garlic"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "The great advantage of growing your own sweetcorn is that you can enjoy it freshly harvested, at its peak of flavour and sweetness. Best sown indoors or bought\u00a0as young plants, sweetcorn needs in a warm, sunny site to ensure the cobs ripen over the summer. You can also grow baby corn and popcorn in a similar way, for added variety.Long, hot summers are ideal for sweetcorn, allowing the cobs to develop well and ripen fullySweetcorn (Zea mays) is best eaten as soon as possible after picking, as its sweetness declines, especially with older varieties. So growing your own, and harvesting just before you\u2019re ready to cook it, gives a huge advantage in terms of flavour, which is far superior to shop-bought cobs. Sweetcorn is most successful in long, hot summers, although many modern varieties are better suited to our cooler climate. Sweetcorn plants are tender, so are best sown indoors, then planted out after the last frost. They grow rapidly in warm conditions to form tall plants, each usually bearing two cobs that ripen from mid-summer onwards. Expect to harvest six to nine cobs from one square metre/yard of ground.Sweetcorn is not suited to growing in containers, as it\u2019s so tall. If space is limited, you can sow smaller, fast-growing crops\u00a0such assaladsorspinachin between sweetcorn plants \u2013 especially those that benefit from a little shade in mid-summer to preventbolting.",
+        "type": "vegetable",
+        "name": "sweetcorn"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Dill is a popular culinary herb, mainly grown for its feathery leaves, which have a mild aniseed-like flavour, similar tofennelbut more subtle. Although harvests last only a few weeks, if you sow seeds repeatedly in small batches, you can have fresh leaves to pick all summer. The flowers and seeds are also edible.Young dill (front) provides leafy harvests, then it produces tall flowering stems (behind)This annual herb makes an attractive plant with soft feathery foliage and delicate clusters of tiny yellow flowers on\u00a0stems about 90cm (3ft) tall. The nectar-rich flowers\u00a0attract butterflies, bees and other pollinators. Dill is pretty enough to\u00a0grace flower borders as well as herb beds and veg plots. It also does well in containers, especially the more compact varieties.Dill is a short-lived plant, producing leafy harvests for several weeks until, sooner or later, it starts to flower. Sow it outdoors from mid-spring in a sunny spot, and you can start harvesting leaves in as little as eight weeks. If you sow several small batches from spring to mid-summer, you\u2019ll have fresh dill leaves to enjoy through into autumn. And if you let dill flower and set seed, you\u2019ll also get self-sown plants to harvest too.Dill leaves are traditionally used to flavour chicken, fish and egg dishes, and of course dill pickles, and can be chopped into soups and salads. Dill seeds can be used in baking and many other dishes.",
+        "type": "herb",
+        "name": "dill"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Sorrel is an easy, low-maintenance and hardyPerennials are plants that live for multiple years. They come in all shapes and sizes and fill our gardens with colourful flowers and ornamental foliage. Many are hardy and can survive outdoors all year round, while less hardy types need protection over winter. The term herbaceous perennial is used to describe long-lived plants without a permanent woody structure (they die back to ground level each autumn), distinguishing them from trees, shrubs and sub-shrubs.perennialwith edible, sharp-tasting leaves. Sorrel has long been grown as a medicinal and culinary herb, and before lemons became widely available it was used to add a tart, tangy flavour to many dishes.Red veined sorrelToday sorrel is mostly grown asA method of harvesting leafy crops so the plants continue to grow and sprout further leaves, providing several pickings over a long period. Snip off just a few outer leaves from each plant, rather than all of them, leaving the inner leaves to grow, for picking in a few weeks. Suitable candidates include lettuces and most types of salad leaves, as well as chard, spinach, mizuna and kale.cut and come againbaby leaves that give a sharp refreshing kick to salads. Leaves can also be cooked likespinachor used in sauces, soups and other dishes.There are three species often grown for eating:\nPerennials are plants that live for multiple years. They come in all shapes and sizes and fill our gardens with colourful flowers and ornamental foliage. Many are hardy and can survive outdoors all year round, while less hardy types need protection over winter. The term herbaceous perennial is used to describe long-lived plants without a permanent woody structure (they die back to ground level each autumn), distinguishing them from trees, shrubs and sub-shrubs.\nA method of harvesting leafy crops so the plants continue to grow and sprout further leaves, providing several pickings over a long period. Snip off just a few outer leaves from each plant, rather than all of them, leaving the inner leaves to grow, for picking in a few weeks. Suitable candidates include lettuces and most types of salad leaves, as well as chard, spinach, mizuna and kale.\nFrench or buckler-leaved sorrel(Rumex scutatus) \u2013 small shield-shaped leaves with lemony tang, ideal for adding to salads\nRed-veined sorrel(Rumex sanguineusvar.sanguineus) \u2013 the long, pointed leaves with a dark red mid-rib, veins and stem are both decorative and edible, with a sharp flavour\nBroad-leaved sorrel or common sorrel(Rumex acetosa) \u2013 a BritishA native plant is one that originated or arrived naturally in a particular place without human involvement. In the British Isles, native plants are those that were here during the last ice age or have arrived unaided since.nativeforming a clump of long leaves that have an astringent taste. Use baby leaves in salads or cook like spinach\nA native plant is one that originated or arrived naturally in a particular place without human involvement. In the British Isles, native plants are those that were here during the last ice age or have arrived unaided since.\nNativesheep\u2019s sorrel(R. acetosella) is also edible, but not generally grown as a garden herb, although it is sometimes used as foraged wild leaves. Several species ofoxalisare also commonly known as sorrel, but these are ornamental plants, wildflowers or weeds.The three edible species of sorrel form low leafy plants, which are best harvested regularly to encourage a steady supply of fresh young leaves. Older leaves can become tough and bitter. They will send up tall flower spikes in summer, which should be removed if you want to keep picking the leaves. If the leaves get too large, simply cut them back to encourage fresh young growth.Sorrel is easy to grow from seed or can be bought as young plants, and is happy in sun or light shade, in most types of soil. Plants live for several years, dying back over winter then re-sprouting from the ground in spring \u2013 although young plants may be more productive, so you may prefer to sow them fresh each year.",
+        "type": "herb",
+        "name": "sorrel"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Grown for its spicy, pungent leaves, oregano is a sun-loving Mediterranean herb. Easy to grow, compact and drought tolerant, it thrives in pots or in the ground. It\u2019s widely used in Italian and Greek cuisine, especially when dried.Oregano forms a low clump of small aromatic leaves and sends up attractive pink or white flowerheads in summer, about 30cm (1ft) tall. It\u2019s a perennial, living for many years, and is usually hardy enough to survive the British winter if grown in a warm sunny spot, in a container or in free-draining soil.You can harvest the leaves regularly through spring and summer to enjoy in a wide range of dishes, infusing them with rich Mediterranean flavour. Oregano leaves are usually used dried, but can also be added fresh at the end of cooking. Dried oregano is a key ingredient in many pizza and pasta sauces, as it goes particularly well with tomato.Oregano looks great planted in a herb bed or herb container with other aromatic sun-lovers, such as marjoram, sage and thyme. It also works well in gravel gardens, dry gardens, Mediterranean-style plantings and pollinator-friendly borders, as the flowers are a magnet for butterflies and bees.Oregano and its close relative marjoram are often confused \u2013 they look very similar, like the same growing conditions and both are types of Origanum. There is a lot of overlap between them, but as a general distinction, oregano leaves tend to be spicier, more pungent and more often used dried, while marjoram leaves have milder, sweeter flavour and are usually used fresh.",
+        "type": "herb",
+        "name": "oregano"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Marjorams are\u00a0easy to grow, sun-loving Mediterranean herbs. They're\u00a0closely related tooreganoand the two groups are easily\u00a0confused. There is a lot of overlap between them and the distinction is often not clear. In culinary terms,\u00a0the main difference is flavour \u2013 marjoram\u2019s leaves are usually milder and sweeter, while oregano is spicier and more pungent. They're all\u00a0types ofOriganumand form low bushy mounds of aromatic foliage and rounded heads of small pink or white flowers in summer, up to 50cm (20in) tall. The flowers are very popular with bees and butterflies.Marjoram - origanum vulgare compactumMarjoram makes an attractive addition to herb gardens, containers and any sunny spot. There are several species and varieties,\u00a0including the most common,sweet or knotted marjoram (Origanum majorana)andpot marjoram (O. onites)which generally need winter protection in all but the mildest\u00a0parts of the UK whereasO. 'French'is a little hardier.Marjoram leaves can be picked in spring and summer and are widely used in Greek and Italian cuisine, especially in tomato, meat and poultry dishes. When used fresh, the leaves are usually added near the end of cooking, to maintain their flavour. They can also be sprinkled in salads or infused in oil, vinegar or salad dressings.",
+        "type": "herb",
+        "name": "marjoram"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Chives (Allium schoenoprasum) are in the onion family. They form clumps of tinyThese are fleshy, rounded, underground storage organs, usually sold and planted while dormant. Examples include daffodils, tulips, hyacinths, lilies, onions and garlic. The term is often used to cover other underground storage organs, including corms, tubers and rhizomes.bulbsthat sprout narrow, cylindrical leaves up to 30cm (1ft) tall. These leaves can be harvested from spring to autumn, dying down over winter and re-sprouting every spring.Chives Allium schoenoprasumGarlic chives Allium tuberosumA popular and easy-to-use herb, chives are simple to grow and need very little maintenance. Buy young plants or raise them from seed and give them a sunny or lightly shaded spot, in the ground or in containers. Then just harvest regularly to keep fresh leaves coming. You can also make new plants every few years bydividingestablished clumps in spring. Chives are also highly decorative, producing mauve pompom flowers in late spring and summer.The mild onion-flavoured leaves are used raw, finely chopped and scattered over salads, soups, fish dishes, eggs, baked potatoes and more. The flowers are edible too and can be used in a similar way to the leaves. The nectar-rich flowers also attractbeesand other pollinating insects, so leave plenty for them to enjoy too.\nThese are fleshy, rounded, underground storage organs, usually sold and planted while dormant. Examples include daffodils, tulips, hyacinths, lilies, onions and garlic. The term is often used to cover other underground storage organs, including corms, tubers and rhizomes.",
+        "type": "herb",
+        "name": "chives"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
+        },
+        "image": null,
+        "description": "Savory may not be the most widely known herb, but its small, peppery-tasting leaves have many culinary uses. It\u2019s not generally sold in supermarkets, so the best way to enjoy it is to grow your own. There are three types to choose from: annual summer savory (Satureja hortensis)\u00a0and two evergreen perennials, winter savory (S. montana) and creeping savory (S. spicigera).\u00a0They are all easy to grow and need\u00a0little attention.Summer savory has a milder, more refined flavour, but is a short-lived annualAll\u00a0three types of savory like full sun and free-draining conditions, in the ground or in containers. These attractive small plants take up little space and are ideal for growing alongside other Mediterranean herbs, such asrosemary,thymeandsage, in a herb patch,raised bedor large pot. The tiny white or mauve summer flowers also attract bees and otherpollinating insects. The narrow, aromatic leaves have a spicy flavour and are said to aid digestion. They are often used in bean and lentil dishes, and are a traditional flavouring in salami, stuffings and sausages. Summer savory is also a key ingredient inherbes de Provence.",
+        "type": "herb",
+        "name": "savory"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Choose from two forms of this sun-loving, drought-tolerant aromatic herb \u2013 more delicate French tarragon, with its richer flavour, and milder tasting but hardy and easy-to-grow Russian tarragon.Tarragonis aperennialherb, often woody at the base, with narrow leaves that have a distinctive aromatic flavour. It is highly prized in French cuisine and goes well with fish, eggs and chicken. It is also used to flavour vinegar, mustard, salad dressing, butter and sauces, and can be finely chopped in salads or omelettes.There are two types of tarragon:\nFrench tarragon(Artemisia dracunculusFrench) \u2013 more highly regarded, the leaves have a strong, sweet, peppery flavour with hints of aniseed. It is needs protection from frost and doesn\u2019t produce viable seeds\nRussian tarragon(Artemisia dracunculusRussian) \u2013 easier to grow, more vigorous and fully hardy, the leaves have a mild, slightly bitter flavour without the aniseed tones. The small yellow-green flowers in mid- to late summer attract pollinating insects\nBoth like a warm sheltered location in full sun, in well-drained soil or a large container.",
+        "type": "herb",
+        "name": "tarragon"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ]
+        },
+        "image": null,
+        "description": "Forming a fountain of slender arching foliage, lemon grass thrives in warmth and full sun. This tropical herb is best grown in a pot, so it can be moved indoors over winter. The lemon-flavoured stem bases are widely used in cooking.Lemongrass -Cymbopogon citratus",
+        "type": "herb",
+        "name": "lemongrass"
+    },
+    {
+        "activities": {
+            "": [],
+            "Plant": [
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Mint is easy to grow and there are many different types, offering an array of exciting and unusual flavours, from traditionalpepperminttolime mintorchocolate mintand many more. Mint thrives in most soil types, in sun or light shade, and usually forms large leafy clumps up to 1m (3.3ft) tall and wide.Most mints are vigorous, spreading plants, so are best grown in large pots or in bottomless buckets sunk into the ground, to keep their roots contained.You can pick mint\u2019s young leaves and shoot tips from spring through to autumn. Mint is aherbaceous perennial, so it dies back over winter, then re-sprouts every spring, living for many years. It is very easy to make new plants by taking rootA method of growing new plants from parts of an existing plant, such as sections of root, stem, leaf or bud. When prepared correctly and planted in the right conditions, they can produce roots and eventually become independent plants. There is a wide range of different methods for taking cuttings, depending on the plant and time of year.cuttingsand bydivision. The pretty flowers, usually in fluffy purple, pink or white spires, are rich in nectar, attracting many beneficialpollinating insects.You can use mint in all kinds of dishes, including salads, sauces, pesto and desserts. You can scatter it over buttered new potatoes or peas, add it to ice creams, smoothies and cocktails, or make it into tea.\nA method of growing new plants from parts of an existing plant, such as sections of root, stem, leaf or bud. When prepared correctly and planted in the right conditions, they can produce roots and eventually become independent plants. There is a wide range of different methods for taking cuttings, depending on the plant and time of year.",
+        "type": "herb",
+        "name": "mint"
+    },
+    {
+        "activities": {
+            "": [],
+            "Sow": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant Out": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Plant": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "Harvest": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false
+            ]
+        },
+        "image": null,
+        "description": "Chamomile is easy to grow and makes an attractive addition to a herb collection, either in the ground or in containers, and can also be used in borders andwildflower plantings.Chamomile likes a sunny spot with free-draining soil, and is full hardy. The name chamomile derives from the Greek for \u2018earth apple\u2019, referring to its low-growing habit and apple-like scent. There are several types of chamomile with the characteristic, relaxing fragrance.",
+        "type": "herb",
+        "name": "chamomile"
+    }
 ]

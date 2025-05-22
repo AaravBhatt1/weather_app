@@ -21,11 +21,14 @@ PlantEntry _$PlantEntryFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PlantEntry {
   @HiveField(0)
-  String get name => throw _privateConstructorUsedError;
-  @HiveField(1)
-  String get img => throw _privateConstructorUsedError;
+  String get name =>
+      throw _privateConstructorUsedError; //@HiveField(3) required String image,
   @HiveField(2)
-  String get family => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
+  @HiveField(1)
+  String get description => throw _privateConstructorUsedError;
+  @HiveField(3)
+  Map<String, List<bool>> get activities => throw _privateConstructorUsedError;
 
   /// Serializes this PlantEntry to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45,8 +48,9 @@ abstract class $PlantEntryCopyWith<$Res> {
   @useResult
   $Res call(
       {@HiveField(0) String name,
-      @HiveField(1) String img,
-      @HiveField(2) String family});
+      @HiveField(2) String type,
+      @HiveField(1) String description,
+      @HiveField(3) Map<String, List<bool>> activities});
 }
 
 /// @nodoc
@@ -65,22 +69,27 @@ class _$PlantEntryCopyWithImpl<$Res, $Val extends PlantEntry>
   @override
   $Res call({
     Object? name = null,
-    Object? img = null,
-    Object? family = null,
+    Object? type = null,
+    Object? description = null,
+    Object? activities = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      img: null == img
-          ? _value.img
-          : img // ignore: cast_nullable_to_non_nullable
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String,
-      family: null == family
-          ? _value.family
-          : family // ignore: cast_nullable_to_non_nullable
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
+      activities: null == activities
+          ? _value.activities
+          : activities // ignore: cast_nullable_to_non_nullable
+              as Map<String, List<bool>>,
     ) as $Val);
   }
 }
@@ -95,8 +104,9 @@ abstract class _$$PlantEntryImplCopyWith<$Res>
   @useResult
   $Res call(
       {@HiveField(0) String name,
-      @HiveField(1) String img,
-      @HiveField(2) String family});
+      @HiveField(2) String type,
+      @HiveField(1) String description,
+      @HiveField(3) Map<String, List<bool>> activities});
 }
 
 /// @nodoc
@@ -113,22 +123,27 @@ class __$$PlantEntryImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? img = null,
-    Object? family = null,
+    Object? type = null,
+    Object? description = null,
+    Object? activities = null,
   }) {
     return _then(_$PlantEntryImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      img: null == img
-          ? _value.img
-          : img // ignore: cast_nullable_to_non_nullable
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String,
-      family: null == family
-          ? _value.family
-          : family // ignore: cast_nullable_to_non_nullable
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
+      activities: null == activities
+          ? _value._activities
+          : activities // ignore: cast_nullable_to_non_nullable
+              as Map<String, List<bool>>,
     ));
   }
 }
@@ -138,8 +153,10 @@ class __$$PlantEntryImplCopyWithImpl<$Res>
 class _$PlantEntryImpl extends HiveObject implements _PlantEntry {
   _$PlantEntryImpl(
       {@HiveField(0) required this.name,
-      @HiveField(1) required this.img,
-      @HiveField(2) required this.family});
+      @HiveField(2) required this.type,
+      @HiveField(1) required this.description,
+      @HiveField(3) required final Map<String, List<bool>> activities})
+      : _activities = activities;
 
   factory _$PlantEntryImpl.fromJson(Map<String, dynamic> json) =>
       _$$PlantEntryImplFromJson(json);
@@ -147,16 +164,25 @@ class _$PlantEntryImpl extends HiveObject implements _PlantEntry {
   @override
   @HiveField(0)
   final String name;
-  @override
-  @HiveField(1)
-  final String img;
+//@HiveField(3) required String image,
   @override
   @HiveField(2)
-  final String family;
+  final String type;
+  @override
+  @HiveField(1)
+  final String description;
+  final Map<String, List<bool>> _activities;
+  @override
+  @HiveField(3)
+  Map<String, List<bool>> get activities {
+    if (_activities is EqualUnmodifiableMapView) return _activities;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_activities);
+  }
 
   @override
   String toString() {
-    return 'PlantEntry(name: $name, img: $img, family: $family)';
+    return 'PlantEntry(name: $name, type: $type, description: $description, activities: $activities)';
   }
 
   @override
@@ -165,13 +191,17 @@ class _$PlantEntryImpl extends HiveObject implements _PlantEntry {
         (other.runtimeType == runtimeType &&
             other is _$PlantEntryImpl &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.img, img) || other.img == img) &&
-            (identical(other.family, family) || other.family == family));
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            const DeepCollectionEquality()
+                .equals(other._activities, _activities));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, img, family);
+  int get hashCode => Object.hash(runtimeType, name, type, description,
+      const DeepCollectionEquality().hash(_activities));
 
   /// Create a copy of PlantEntry
   /// with the given fields replaced by the non-null parameter values.
@@ -191,22 +221,27 @@ class _$PlantEntryImpl extends HiveObject implements _PlantEntry {
 
 abstract class _PlantEntry implements PlantEntry {
   factory _PlantEntry(
-      {@HiveField(0) required final String name,
-      @HiveField(1) required final String img,
-      @HiveField(2) required final String family}) = _$PlantEntryImpl;
+          {@HiveField(0) required final String name,
+          @HiveField(2) required final String type,
+          @HiveField(1) required final String description,
+          @HiveField(3) required final Map<String, List<bool>> activities}) =
+      _$PlantEntryImpl;
 
   factory _PlantEntry.fromJson(Map<String, dynamic> json) =
       _$PlantEntryImpl.fromJson;
 
   @override
   @HiveField(0)
-  String get name;
-  @override
-  @HiveField(1)
-  String get img;
+  String get name; //@HiveField(3) required String image,
   @override
   @HiveField(2)
-  String get family;
+  String get type;
+  @override
+  @HiveField(1)
+  String get description;
+  @override
+  @HiveField(3)
+  Map<String, List<bool>> get activities;
 
   /// Create a copy of PlantEntry
   /// with the given fields replaced by the non-null parameter values.

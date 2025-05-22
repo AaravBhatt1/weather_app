@@ -35,6 +35,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreen),
         useMaterial3: true,
+        appBarTheme: AppBarTheme(
+          surfaceTintColor: Theme.of(context).scaffoldBackgroundColor,
+        ),
         searchBarTheme: const SearchBarThemeData(
           elevation: WidgetStatePropertyAll(0),
         ),

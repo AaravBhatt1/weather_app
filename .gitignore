@@ -10,6 +10,9 @@
 .svn/
 migrate_working_dir/
 
+# API Key
+lib/api_key.dart
+
 # other metadata
 .metadata
 pubspec.lock
@@ -49,3 +52,4 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /android/app/*
+pubspec.lock
