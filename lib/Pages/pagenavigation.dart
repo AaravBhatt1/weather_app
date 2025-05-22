@@ -37,6 +37,7 @@ class _PageNavigationState extends State<PageNavigation> {
         child: pages[pageIndex],
       ),
       bottomNavigationBar: NavigationBar(
+        backgroundColor: Colors.green,
         labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         selectedIndex: pageIndex,
         destinations: navBarDestinations,
