@@ -18,8 +18,8 @@ class PlantEntryAdapter extends TypeAdapter<PlantEntry> {
     };
     return PlantEntry(
       name: fields[0] as String,
-      img: fields[1] as String,
-      family: fields[2] as String,
+      type: fields[2] as String,
+      description: fields[1] as String,
     );
   }
 
@@ -29,10 +29,10 @@ class PlantEntryAdapter extends TypeAdapter<PlantEntry> {
       ..writeByte(3)
       ..writeByte(0)
       ..write(obj.name)
-      ..writeByte(1)
-      ..write(obj.img)
       ..writeByte(2)
-      ..write(obj.family);
+      ..write(obj.type)
+      ..writeByte(1)
+      ..write(obj.description);
   }
 
   @override
@@ -53,13 +53,13 @@ class PlantEntryAdapter extends TypeAdapter<PlantEntry> {
 _$PlantEntryImpl _$$PlantEntryImplFromJson(Map<String, dynamic> json) =>
     _$PlantEntryImpl(
       name: json['name'] as String,
-      img: json['img'] as String,
-      family: json['family'] as String,
+      type: json['type'] as String,
+      description: json['description'] as String,
     );
 
 Map<String, dynamic> _$$PlantEntryImplToJson(_$PlantEntryImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
-      'img': instance.img,
-      'family': instance.family,
+      'type': instance.type,
+      'description': instance.description,
     };

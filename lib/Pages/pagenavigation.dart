@@ -20,7 +20,7 @@ class _PageNavigationState extends State<PageNavigation> {
   ];
   final List<Widget> pages = const [
     WeatherPage(),
-    PlantPage(),
+    PlantsPage(),
     SettingsPage()
   ];
 
