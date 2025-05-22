@@ -3,16 +3,14 @@ import 'dart:math';
 
 
 class DeletableCard extends StatefulWidget {
-  final Color color;
-  final String label;
   final double height;
   final VoidCallback onDelete;
+  final Widget? child;
 
   const DeletableCard({
     super.key,
-    required this.color,
-    required this.label,
     required this.onDelete,
+    this.child,
     this.height = 200 // default height of 200
   });
 
@@ -36,7 +34,6 @@ class _DeletableCardState extends State<DeletableCard>
     )..addListener(() {
       if (mounted) setState(() {});
     });
-
     _shakeAnimation =
         Tween<double>(begin: 0, end: 8 * pi).animate(CurvedAnimation(
           parent: _controller,
@@ -79,19 +76,11 @@ class _DeletableCardState extends State<DeletableCard>
                 borderRadius: BorderRadius.circular(40),
               ),
               elevation: 4,
-              color: widget.color,
               margin: const EdgeInsets.symmetric(vertical: 12),
               child: SizedBox(
                 height: widget.height,
                 child: Center(
-                  child: Text(
-                    widget.label,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                 child: widget.child,
                 ),
               ),
             ),

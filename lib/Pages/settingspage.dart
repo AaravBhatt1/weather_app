@@ -1,102 +1,129 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:weather_app/preferences.dart';
 
-class SettingsPage extends StatefulWidget {
+class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
-  
-  @override
-  State<SettingsPage> createState() => _SettingsPageState();
-}
 
-class _SettingsPageState extends State<SettingsPage> {
-  final ExpansionTileController controller = ExpansionTileController();
-  final List<String> subsections = [
-    'Notification Settings',
-    'Theme / Appearance',
-    'Numerical Settings',
-  ];
-  // One controller per tile:
-  late final List<ExpansionTileController> _controllers;
-
-  @override
-  void initState() {
-    super.initState();
-    _controllers = List<ExpansionTileController>.generate(
-      subsections.length,
-      (_) => ExpansionTileController(),
-    );
+  Future<void> launchURL(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri)) {
+      throw 'Cannot launch link';
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Settings')),
-      body: Column(
-        children: [
-          Row(
-            key: const ValueKey("row"),
-            crossAxisAlignment: CrossAxisAlignment.start,
+      body: Consumer<Preferences>(
+        builder: (context, prefs, _) {
+          return ListView(
+            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
             children: [
-              Image.asset(
-                'assets/sun.png',
-                key: const ValueKey('sun'),
-                width: 150,
-                height: 150,
-                fit: BoxFit.contain,
+
+
+              // ********** THEME **********
+              const Text('Theme',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+              SwitchListTile(
+                title: const Text('Dark Mode'),
+                value: prefs.darkMode,
+                onChanged: (v) => prefs.darkMode = v,
               ),
-              const SizedBox(width: 16), 
-              const Expanded( 
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
-                      'CAMBRIDGE',
-                      key: ValueKey('text1'),
-                      style: TextStyle(
-                        fontSize: 30,
-                        //fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 10, key: ValueKey('box2')),
-                    Text(
-                      '23°C',
-                      key: ValueKey('text2'),
-                      style: TextStyle(
-                        fontSize: 80,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+              const Divider(height: 32),
+
+              // ********** UNITS **********
+              const Text('Units',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+              ListTile(
+                title: const Text('Temperature Unit'),
+                trailing: DropdownButton<bool>(
+                  value: prefs.useMetric,
+                  items: const [
+                    DropdownMenuItem(child: Text('Celsius (°C)'), value: true),
+                    DropdownMenuItem(child: Text('Fahrenheit (°F)'), value: false),
                   ],
+                  onChanged: (v) {
+                    if (v != null) prefs.useMetric = v;
+                  },
                 ),
               ),
-            ],
-          ),
+              const Divider(height: 32),
 
-          Expanded (
-            child: ListView.builder(
-              itemCount: subsections.length,
-              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 12),
-                  child: ExpansionTile(
-                    controller: _controllers[index],
-                    title: Text(subsections[index]),
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(24),
-                        child: Text(
-                          'Contents of "${subsections[index]}"',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ), 
-          )
-        ]
-      )
+              // ********** ALERTS/NOTIFS **********
+              const Text('Alerts & Notifications',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+              SwitchListTile(
+                title: const Text('Frost Alerts'),
+                value: prefs.frostAlerts,
+                onChanged: (v) => prefs.frostAlerts = v,
+              ),
+              SwitchListTile(
+                title: const Text('Rain Alerts'),
+                value: prefs.rainAlerts,
+                onChanged: (v) => prefs.rainAlerts = v,
+              ),
+              ListTile(
+                title: const Text('Daily Alert Time'),
+                subtitle: Text(prefs.alertTime.format(context)),
+                onTap: () async {
+                  final picked = await showTimePicker(
+                    context: context,
+                    initialTime: prefs.alertTime,
+                  );
+                  if (picked != null) prefs.alertTime = picked;
+                },
+              ),
+              const Divider(height: 32),
+
+              // // ********** GARDEN LOCATION **********
+              const Text('Garden Location',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+              ListTile(
+                title: const Text('Location'),
+                subtitle: Text(prefs.gardenLocation),
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (ctx) {
+                      final controller = TextEditingController(text: prefs.gardenLocation);
+                      return AlertDialog(
+                        title: const Text('Set Garden Location'),
+                        content: TextField(controller: controller),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(ctx),
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              prefs.gardenLocation = controller.text;
+                              Navigator.pop(ctx);
+                            },
+                            child: const Text('Save'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+              ),
+              const Divider(height: 32),
+
+              // // ********** ABOUT **********
+              const Text('About',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+              ListTile(
+                title: const Text('About Us'),
+                trailing: const Icon(Icons.feedback_outlined),
+                onTap: () => launchURL('https://www.youtube.com/watch?v=dQw4w9WgXcQ'),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }

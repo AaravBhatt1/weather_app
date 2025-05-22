@@ -20,6 +20,9 @@ class _PlantsPageState extends State<PlantsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('My Plant Notifications'),
+      ),
       body: ListView(
         children: [
           for (final plant in userPlants)

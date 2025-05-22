@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Widgets/apibuilder.dart';
+import 'package:weather_app/Widgets/temperaturewidget.dart';
 import '../Widgets/DeletableCard.dart';
 import 'RestorePage.dart';
 import 'dart:math';
@@ -11,123 +12,52 @@ class WeatherPage extends StatefulWidget {
   State<WeatherPage> createState() => _WeatherPageState();
 }
 
+//TODO: Persist the cards so we can add them, and make it so there is a widget
 class _WeatherPageState extends State<WeatherPage> {
   final List<Map<String, dynamic>> items = [
-    {'key': 'blueCard', 'color': Colors.blue, 'label': 'Blue', 'height': 200.0},
-    {'key': 'pinkCard', 'color': Colors.pink, 'label': 'Pink', 'height': 300.0},
     {
-      'key': 'yellowCard',
-      'color': Colors.yellow,
-      'label': 'Yellow',
-      'height': 100.0
-    },
-    {'key': 'greyCard', 'color': Colors.grey, 'label': 'Grey', 'height': 150.0}
-  ];
-  final List<Map<String, dynamic>> unseenItems = [
-    {
-      'key': 'orangeCard',
-      'color': Colors.orange,
-      'label': 'Orange',
-      'height': 300.0
-    },
-    {
-      'key': 'greenCard',
-      'color': Colors.green,
-      'label': 'Green',
-      'height': 160.0
-    },
-    {
-      'key': 'purpleCard',
-      'color': Colors.purple,
-      'label': 'Purple',
+      'key': 'temperatureCard',
+      'child': const TemperatureWidget(),
       'height': 200.0
-    }
+    },
   ];
+  final List<Map<String, dynamic>> unseenItems = [];
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ApiBuilder(
-          builder: (context, data) {
-            return SafeArea(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 16),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.asset(
-                          'assets/sun.png',
-                          key: const ValueKey('sun'),
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
-                        const SizedBox(width: 16),
-                        const Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'CAMBRIDGE',
-                                key: ValueKey('text1'),
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: 7, key: ValueKey('box2')),
-                              Text(
-                                '23°C',
-                                key: ValueKey('text2'),
-                                style: TextStyle(
-                                  fontSize: 60,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  Expanded(
-                    child: ReorderableListView(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
-                      onReorder: (oldIndex, newIndex) {
-                        setState(() {
-                          final item = items.removeAt(oldIndex);
-                          items.insert(
-                              newIndex > oldIndex ? newIndex - 1 : newIndex,
-                              item);
-                        });
-                      },
-                      children: [
-                        for (var item in items)
-                          DeletableCard(
-                            key: ValueKey(item['key']),
-                            color: item['color'],
-                            label: item['label'],
-                            height: item['height'],
-                            onDelete: () {
-                              setState(() {
-                                unseenItems.add(item);
-                                items.removeWhere((i) =>
-                                i['key'] == item['key']);
-                              });
-                            },
-                          ),
-                      ],
-                    ),
-                  ),
-                ],
+      appBar: AppBar(
+        title: const Text("Weather")
+      ),
+      body: Container(
+        color: Theme.of(context).scaffoldBackgroundColor,
+        child: ReorderableListView(
+          padding: const EdgeInsets.all(30),
+          onReorder: (oldIndex, newIndex) {
+            setState(() {
+              final item = items.removeAt(oldIndex);
+              items.insert(
+                  newIndex > oldIndex ? newIndex - 1 : newIndex,
+                  item);
+            });
+          },
+          children: [
+            for (var item in items)
+              DeletableCard(
+                key: ValueKey(item['key']),
+                child: item['child'],
+                height: item['height'],
+                onDelete: () {
+                  setState(() {
+                    unseenItems.add(item);
+                    items.removeWhere((i) =>
+                    i['key'] == item['key']);
+                  });
+                },
               ),
-            );
-          }
+          ],
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(
