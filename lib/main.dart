@@ -25,15 +25,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Weather App',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.lightGreen,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreen),
         useMaterial3: true,
         appBarTheme: AppBarTheme(
           surfaceTintColor: Theme.of(context).scaffoldBackgroundColor,
+          backgroundColor: Colors.lightGreen,
         ),
         searchBarTheme: const SearchBarThemeData(
+          backgroundColor: WidgetStatePropertyAll(Colors.green),
           elevation: WidgetStatePropertyAll(0),
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: Colors.green,
           elevation: 0,
         ),
       ),

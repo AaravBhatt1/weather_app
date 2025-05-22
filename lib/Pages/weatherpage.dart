@@ -49,51 +49,53 @@ class _WeatherPageState extends State<WeatherPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ApiBuilder(
-          builder: (context, data) {
-            return SafeArea(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 16),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.asset(
-                          'assets/sun.png',
-                          key: const ValueKey('sun'),
-                          width: 150,
-                          height: 150,
-                          fit: BoxFit.contain,
-                        ),
-                        const SizedBox(width: 16),
-                        const Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'CAMBRIDGE',
-                                key: ValueKey('text1'),
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: 10, key: ValueKey('box2')),
-                              Text(
-                                '23°C',
-                                key: ValueKey('text2'),
-                                style: TextStyle(
-                                  fontSize: 80,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
+        builder: (context, data) {
+          return SafeArea(
+            child: Container(
+              color: Colors.lightGreen,
+              child:
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            'assets/sun.png',
+                            key: const ValueKey('sun'),
+                            width: 150,
+                            height: 150,
+                            fit: BoxFit.contain,
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
+                          const SizedBox(width: 16),
+                          const Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'CAMBRIDGE',
+                                  key: ValueKey('text1'),
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                SizedBox(height: 10, key: ValueKey('box2')),
+                                Text(
+                                  '23°C',
+                                  key: ValueKey('text2'),
+                                  style: TextStyle(
+                                    fontSize: 80,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ), 
 
                   Expanded(
                     child: ReorderableListView(
@@ -126,7 +128,9 @@ class _WeatherPageState extends State<WeatherPage> {
                   ),
                 ],
               ),
-            );
+            )
+          );
+
           }
       ),
 
