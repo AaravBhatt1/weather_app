@@ -15,12 +15,7 @@ class _WeatherPageState extends State<WeatherPage> {
   final List<Map<String, dynamic>> items = [
     {'key': 'blueCard', 'color': Colors.blue, 'label': 'Blue', 'height': 200.0},
     {'key': 'pinkCard', 'color': Colors.pink, 'label': 'Pink', 'height': 300.0},
-    {
-      'key': 'yellowCard',
-      'color': Colors.yellow,
-      'label': 'Yellow',
-      'height': 100.0
-    },
+    {'key': 'yellowCard', 'color': Colors.yellow, 'label': 'Yellow','height': 100.0},
     {'key': 'greyCard', 'color': Colors.grey, 'label': 'Grey', 'height': 150.0}
   ];
   final List<Map<String, dynamic>> unseenItems = [
@@ -43,13 +38,24 @@ class _WeatherPageState extends State<WeatherPage> {
       'height': 200.0
     }
   ];
-
+  bool isDataLoaded = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ApiBuilder(
         builder: (context, data) {
+          print(data);
+          final List<Map<String, dynamic>> updatedItems =
+          [
+            {'key': 'blueCard', 'color': Colors.blue, 'label': data['current']['wind_mph'], 'height': 200.0},
+            {'key': 'pinkCard', 'color': Colors.pink, 'label': 'Pink', 'height': 300.0},
+            {'key': 'pinkCard', 'color': Colors.pink, 'label': 'Pink', 'height': 300.0},
+            {'key': 'greyCard', 'color': Colors.grey, 'label': 'Grey', 'height': 150.0},
+            {'key': 'orangeCard', 'color': Colors.orange, 'label': 'Orange','height': 300.0},
+            {'key': 'greenCard', 'color': Colors.green, 'label': 'Green', 'height': 160.0},
+          ];
+
           return SafeArea(
             child: Container(
               color: Colors.lightGreen,
