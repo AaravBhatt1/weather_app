@@ -12,15 +12,16 @@ class WeatherPage extends StatefulWidget {
 
 class _WeatherPageState extends State<WeatherPage> {
   final List<Map<String, dynamic>> items = [
-    {'key': 'blueCard', 'color': Colors.blue, 'label': 'Blue'},
-    {'key': 'pinkCard', 'color': Colors.pink, 'label': 'Pink'},
-    {'key': 'yellowCard', 'color': Colors.yellow, 'label': 'Yellow'},
-    {'key': 'orangeCard', 'color': Colors.orange, 'label': 'Orange'},
-    {'key': 'greenCard', 'color': Colors.green, 'label': 'Green'},
-    {'key': 'purpleCard', 'color': Colors.purple, 'label': 'Purple'},
-    {'key': 'greyCard', 'color': Colors.grey, 'label': 'Grey'},
+    {'key': 'blueCard', 'color': Colors.blue, 'label': 'Blue', 'height' : 200.0},
+    {'key': 'pinkCard', 'color': Colors.pink, 'label': 'Pink', 'height' : 300.0},
+    {'key': 'yellowCard', 'color': Colors.yellow, 'label': 'Yellow', 'height' : 100.0},
+    {'key': 'greyCard', 'color': Colors.grey, 'label': 'Grey', 'height' : 150.0}
   ];
-  final List<Map<String, dynamic>> unseenItems = [];
+  final List<Map<String, dynamic>> unseenItems = [
+    {'key': 'orangeCard', 'color': Colors.orange, 'label': 'Orange', 'height' : 300.0},
+    {'key': 'greenCard', 'color': Colors.green, 'label': 'Green', 'height' : 160.0},
+    {'key': 'purpleCard', 'color': Colors.purple, 'label': 'Purple', 'height' : 200.0}
+  ];
 
 
   @override
@@ -87,6 +88,7 @@ class _WeatherPageState extends State<WeatherPage> {
                           key: ValueKey(item['key']),
                           color: item['color'],
                           label: item['label'],
+                          height : item['height'],
                           onDelete: () {
                             setState(() {
                               unseenItems.add(item);
@@ -130,6 +132,7 @@ class _WeatherPageState extends State<WeatherPage> {
 class DeletableCard extends StatefulWidget {
   final Color color;
   final String label;
+  final double height;
   final VoidCallback onDelete;
 
   const DeletableCard({
@@ -137,6 +140,7 @@ class DeletableCard extends StatefulWidget {
     required this.color,
     required this.label,
     required this.onDelete,
+    this.height = 200 // default height of 200
   });
 
   @override
@@ -199,13 +203,13 @@ class _DeletableCardState extends State<DeletableCard>
           children: [
             Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(40),
               ),
               elevation: 4,
               color: widget.color,
               margin: const EdgeInsets.symmetric(vertical: 12),
               child: SizedBox(
-                height: 200,
+                height: widget.height,
                 child: Center(
                   child: Text(
                     widget.label,
