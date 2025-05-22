@@ -20,19 +20,23 @@ class PlantEntryAdapter extends TypeAdapter<PlantEntry> {
       name: fields[0] as String,
       type: fields[2] as String,
       description: fields[1] as String,
+      activities: (fields[3] as Map).map((dynamic k, dynamic v) =>
+          MapEntry(k as String, (v as List).cast<bool>())),
     );
   }
 
   @override
   void write(BinaryWriter writer, PlantEntry obj) {
     writer
-      ..writeByte(3)
+      ..writeByte(4)
       ..writeByte(0)
       ..write(obj.name)
       ..writeByte(2)
       ..write(obj.type)
       ..writeByte(1)
-      ..write(obj.description);
+      ..write(obj.description)
+      ..writeByte(3)
+      ..write(obj.activities);
   }
 
   @override
@@ -55,6 +59,10 @@ _$PlantEntryImpl _$$PlantEntryImplFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String,
       type: json['type'] as String,
       description: json['description'] as String,
+      activities: (json['activities'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(k, (e as List<dynamic>).map((e) => e as bool).toList()),
+      ),
     );
 
 Map<String, dynamic> _$$PlantEntryImplToJson(_$PlantEntryImpl instance) =>
@@ -62,4 +70,5 @@ Map<String, dynamic> _$$PlantEntryImplToJson(_$PlantEntryImpl instance) =>
       'name': instance.name,
       'type': instance.type,
       'description': instance.description,
+      'activities': instance.activities,
     };

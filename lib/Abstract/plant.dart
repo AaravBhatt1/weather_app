@@ -15,6 +15,7 @@ class PlantEntry extends HiveObject with _$PlantEntry {
     //@HiveField(3) required String image,
     @HiveField(2) required String type,
     @HiveField(1) required String description,
+    @HiveField(3) required Map<String, List<bool>> activities,
   }) = _PlantEntry;
   
   factory PlantEntry.fromJson(Map<String, dynamic> json) => _$PlantEntryFromJson(json);
