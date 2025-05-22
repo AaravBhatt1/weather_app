@@ -9,29 +9,29 @@ part 'plant.freezed.dart';
 @freezed
 @HiveType(typeId: 0)
 class PlantEntry extends HiveObject with _$PlantEntry {
-  
+
   factory PlantEntry({
     @HiveField(0) required String name,
     //@HiveField(3) required String image,
     @HiveField(2) required String type,
     @HiveField(1) required String description,
   }) = _PlantEntry;
-  
-  factory PlantEntry.fromJson(Map<String, dynamic> json) => _$PlantEntryFromJson(json);
+
+  factory PlantEntry.fromJson(Map<String, dynamic> json) =>
+      _$PlantEntryFromJson(json);
 }
 
+  List<PlantEntry> loadPlants() {
+    final box = Hive.box<PlantEntry>('plants');
+    return box.values.toList();
+  }
 
-List<PlantEntry> loadPlants() {
-  final box = Hive.box<PlantEntry>('plants');
-  return box.values.toList();
-}
+  Future<void> importPlantsFromJson() async {
+    final box = await Hive.openBox<PlantEntry>('plants');
+    final String jsonString = await rootBundle.loadString('assets/plants.json');
+    final List<dynamic> jsonList = json.decode(jsonString);
 
-Future<void> importPlantsFromJson() async {
-  final box = await Hive.openBox<PlantEntry>('plants');
-  final String jsonString = await rootBundle.loadString('assets/plants.json');
-  final List<dynamic> jsonList = json.decode(jsonString);
+    final plants = jsonList.map((json) => PlantEntry.fromJson(json)).toList();
 
-  final plants = jsonList.map((json) => PlantEntry.fromJson(json)).toList();
-
-  await box.addAll(plants);
-}
+    await box.addAll(plants);
+  }

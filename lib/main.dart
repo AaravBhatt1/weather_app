@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Abstract/plant.dart';
+import 'package:weather_app/Abstract/userplants.dart';
 import 'Pages/pagenavigation.dart';
 
 import 'package:hive/hive.dart';
@@ -12,6 +13,8 @@ void main() async{
   await Hive.initFlutter();
   Hive.registerAdapter(PlantEntryAdapter());
   await importPlantsFromJson();
+
+  await UserPlants().init();
 
   runApp(const MyApp());
 }

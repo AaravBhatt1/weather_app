@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Abstract/plant.dart';
+import 'package:weather_app/Abstract/userplants.dart';
+import 'package:weather_app/Pages/addplantspage.dart';
 import '../Pages/plantpage.dart';
 
 List<PlantEntry> testPlants = loadPlants();
@@ -12,7 +14,7 @@ class PlantsPage extends StatefulWidget {
 }
 
 class _PlantsPageState extends State<PlantsPage> {
-  final List<PlantEntry> userPlants = loadPlants();
+  final List<PlantEntry> userPlants = UserPlants().getAll();
 
 
   @override
@@ -41,7 +43,7 @@ class _PlantsPageState extends State<PlantsPage> {
       ),
       floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
-          onPressed: () => {}
+          onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => Addplantspage()))
       ),
     );
   }

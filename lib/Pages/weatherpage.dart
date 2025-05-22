@@ -75,16 +75,16 @@ class _WeatherPageState extends State<WeatherPage> {
                                 'CAMBRIDGE',
                                 key: ValueKey('text1'),
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 10, key: ValueKey('box2')),
+                              SizedBox(height: 7, key: ValueKey('box2')),
                               Text(
                                 '23°C',
                                 key: ValueKey('text2'),
                                 style: TextStyle(
-                                  fontSize: 80,
+                                  fontSize: 60,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
