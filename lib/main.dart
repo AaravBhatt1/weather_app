@@ -36,16 +36,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Weather App',
       darkTheme: ThemeData.dark(),
-      themeMode: context.watch<Preferences>().darkMode
-          ? ThemeMode.dark
-          : ThemeMode.light,
       // theme: ThemeData.light(),
-      theme: ThemeData(
+      theme: ThemeData.from(colorScheme: ColorScheme.fromSeed(seedColor: Colors.green, brightness: context.watch<Preferences>().darkMode
+          ? Brightness.dark
+          : Brightness.light )).copyWith(
         cardTheme: const CardTheme(
           elevation: 0
         ),
         //scaffoldBackgroundColor: Colors.lightGreen,
-        useMaterial3: true,
         //appBarTheme: AppBarTheme(
           //surfaceTintColor: Theme.of(context).scaffoldBackgroundColor,
           //backgroundColor: Colors.lightGreen,

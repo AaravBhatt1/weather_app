@@ -33,7 +33,15 @@ class _PageNavigationState extends State<PageNavigation> {
       ),
       body: AnimatedSwitcher(
         duration: const Duration(milliseconds: 250),
-        child: pages[pageIndex],
+        child: Theme(
+          data: Theme.of(context).copyWith(
+            appBarTheme: AppBarTheme(
+                centerTitle: false,
+                toolbarHeight: 80,
+                titleTextStyle: Theme.of(context).textTheme.headlineLarge,
+            ),
+          ),
+            child: pages[pageIndex]),
       ),
       bottomNavigationBar: NavigationBar(
         labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
