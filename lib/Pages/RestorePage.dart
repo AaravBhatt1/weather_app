@@ -32,7 +32,7 @@ class _RestorePageState extends State<RestorePage> {
               });
             },
             child: Card(
-              color: item['color'].withOpacity(isSelected ? 1.0 : 0.5),
+              color: item['color'].withOpacity(isSelected ? 1.0 : 0.5), //TODO: something goes wrong here when deleting a widget from the weatherpage and then clicking the add widget button.
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),

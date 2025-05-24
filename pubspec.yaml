@@ -74,6 +74,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/humidity.png
     - assets/sun.png
   # To add assets to your application, add an assets section, like this:
     - assets/plants.json

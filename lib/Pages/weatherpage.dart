@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Widgets/apibuilder.dart';
 import 'package:weather_app/Widgets/temperaturewidget.dart';
+import 'package:weather_app/Widgets/humiditywidget.dart';
 import '../Widgets/DeletableCard.dart';
 import 'RestorePage.dart';
 import 'dart:math';
@@ -20,6 +21,11 @@ class _WeatherPageState extends State<WeatherPage> {
       'child': const TemperatureWidget(),
       'height': 200.0
     },
+    {
+      'key': 'humidityCard',
+      'child': const HumidityWidget(),
+      'height': 150.0
+    }
   ];
   final List<Map<String, dynamic>> unseenItems = [];
 
