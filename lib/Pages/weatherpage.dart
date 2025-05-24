@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Widgets/apibuilder.dart';
+import 'package:weather_app/Widgets/gustwidget.dart';
 import 'package:weather_app/Widgets/temperaturewidget.dart';
 import 'package:weather_app/Widgets/humiditywidget.dart';
 import '../Widgets/DeletableCard.dart';
@@ -19,11 +20,16 @@ class _WeatherPageState extends State<WeatherPage> {
     {
       'key': 'temperatureCard',
       'child': const TemperatureWidget(),
-      'height': 200.0
+      'height': 150.0
     },
     {
       'key': 'humidityCard',
       'child': const HumidityWidget(),
+      'height': 150.0
+    },
+    {
+      'key': 'gustCard',
+      'child': const GustWidget(),
       'height': 150.0
     }
   ];

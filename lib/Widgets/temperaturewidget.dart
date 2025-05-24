@@ -12,39 +12,41 @@ class TemperatureWidget extends StatelessWidget {
       width: 300,
       child: ApiBuilder(
         builder: (context, data) {
-          return Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Image.asset(
-                'assets/sun.png',
+          return Container (
+            padding: const EdgeInsets.only(top: 10.0),
+            child:Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.network(
+                'https:${data['current']['condition']['icon']}',
                 width: 100,
                 height: 100,
-                fit: BoxFit.cover,
               ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      data['location']['name'].toUpperCase(),
-                      style: const TextStyle( // TODO: Use theming
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        data['location']['name'].toUpperCase(),
+                        style: const TextStyle( // TODO: Use theming
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 10),
-                    Text(
-                      '${data['current']['temp_c'].round()}°C',
-                      style: const TextStyle(
-                        fontSize: 60,
-                        fontWeight: FontWeight.bold,
+                      const SizedBox(height: 10),
+                      Text(
+                        '${data['current']['temp_c'].round()}°C',
+                        style: const TextStyle(
+                          fontSize: 60,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-          ]
+              ]
+            )
           );
         }
       ),
