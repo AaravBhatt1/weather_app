@@ -19,18 +19,24 @@ class _WeatherPageState extends State<WeatherPage> {
   final List<Map<String, dynamic>> items = [
     {
       'key': 'temperatureCard',
+      'label': "",
       'child': const TemperatureWidget(),
-      'height': 150.0
+      'height': 150.0,
+      'color': Colors.blue
     },
     {
       'key': 'humidityCard',
+      'label': "",
       'child': const HumidityWidget(),
-      'height': 150.0
+      'height': 150.0,
+      'color': Colors.blue
     },
     {
       'key': 'gustCard',
+      'label': '',
       'child': const GustWidget(),
-      'height': 150.0
+      'height': 150.0,
+      'color': Colors.blue
     }
   ];
   final List<Map<String, dynamic>> unseenItems = [];
@@ -45,7 +51,7 @@ class _WeatherPageState extends State<WeatherPage> {
       body: Container(
         color: Theme.of(context).scaffoldBackgroundColor,
         child: ReorderableListView(
-          padding: const EdgeInsets.all(30),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
           onReorder: (oldIndex, newIndex) {
             setState(() {
               final item = items.removeAt(oldIndex);
@@ -74,14 +80,14 @@ class _WeatherPageState extends State<WeatherPage> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          final restored = await Navigator.push(
+          final List<Map<String, dynamic>>? restored = await Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) => RestorePage(unseenItems: unseenItems),
             ),
           );
 
-          if (restored != null && restored is List<Map<String, dynamic>>) {
+          if (restored != null) {
             setState(() {
               items.addAll(restored);
               unseenItems.removeWhere((d) =>

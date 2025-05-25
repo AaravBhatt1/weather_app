@@ -2,10 +2,12 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hive/hive.dart';
 import 'package:weather_app/Abstract/plant.dart';
 
+//TODO: Replace String with some unique id
+
 class UserPlants {
   UserPlants._internal();
 
-  late final Box<PlantEntry> _box;
+  late final Box<String> _box;
   static final UserPlants _instance = UserPlants._internal();
   final String boxName = "UserPlants";
 
@@ -24,12 +26,15 @@ class UserPlants {
     }
   }
 
-  List<PlantEntry> getAll() {
+  List<String> getAll() {
     return _box.values.toList();
   }
 
-  void addPlant(PlantEntry entry) {
+  void addPlant(String entry) {
     _box.add(entry);
   }
 
+  void deletePlant(String entry) {
+    _box.delete(entry);
+  }
 }

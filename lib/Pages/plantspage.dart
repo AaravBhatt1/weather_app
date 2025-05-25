@@ -14,21 +14,21 @@ class PlantsPage extends StatefulWidget {
 }
 
 class _PlantsPageState extends State<PlantsPage> {
-  final List<PlantEntry> userPlants = UserPlants().getAll();
-
-
   @override
   Widget build(BuildContext context) {
+    List<String> userPlants = UserPlants().getAll();
     return Scaffold(
       appBar: AppBar(
         title: Text('My Plant Notifications'),
       ),
       body: ListView(
         children: [
-          for (final plant in userPlants)
+          for (final plant in loadPlants())
+            if (userPlants.contains(plant.name))
             ExpansionTile(
+              // TODO: Move gesture detector outside
               title: GestureDetector(
-                onTap: () {
+                onLongPress: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -45,7 +45,7 @@ class _PlantsPageState extends State<PlantsPage> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.add),
+          child: const Icon(Icons.edit),
           onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => Addplantspage()))
       ),
     );
