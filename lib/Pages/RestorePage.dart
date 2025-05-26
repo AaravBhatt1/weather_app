@@ -38,19 +38,19 @@ class _RestorePageState extends State<RestorePage> {
               ),
               elevation: isSelected ? 6 : 2,
               margin: const EdgeInsets.symmetric(vertical: 8),
-              child: SizedBox(
-                height: 150,
-                child: Center(
-                  child: Text(
-                    item['label'],
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                child: SizedBox(
+                  height: item['height'] ?? 150.0,
+                  child: Center(
+                    child: item['child'] ?? Text(
+                      item['label'] ?? 'Unnamed',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
-              ),
             ),
           );
         }).toList(),

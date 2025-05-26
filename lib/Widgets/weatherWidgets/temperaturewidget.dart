@@ -12,6 +12,7 @@ class TemperatureWidget extends StatelessWidget {
       width: 300,
       child: ApiBuilder(
         builder: (context, data) {
+          print(data);
           return Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Widgets/apibuilder.dart';
-import 'package:weather_app/Widgets/temperaturewidget.dart';
+import 'package:weather_app/Widgets/weatherWidgets/weatherWidgetsBarrel.dart';
 import '../Widgets/DeletableCard.dart';
 import 'RestorePage.dart';
 import 'dart:math';
@@ -14,14 +14,54 @@ class WeatherPage extends StatefulWidget {
 
 //TODO: Persist the cards so we can add them, and make it so there is a widget
 class _WeatherPageState extends State<WeatherPage> {
+
   final List<Map<String, dynamic>> items = [
     {
-      'key': 'temperatureCard',
-      'child': const TemperatureWidget(),
-      'height': 200.0
+      'key': 'humidityCard',
+      'label': 'Humidity',
+      'color': Colors.teal,
+      'child': const HumidityWidget(),
+      'height': 100.0,
+    },
+    {
+      'key': 'precipitationCard',
+      'label': 'Precipitation',
+      'color': Colors.blue,
+      'child': const PrecipitationWidget(),
+      'height': 100.0,
+    },
+    {
+      'key': 'windCard',
+      'label': 'Wind',
+      'color': Colors.indigo,
+      'child': const WindWidget(),
+      'height': 100.0,
+    },
+    {
+      'key': 'uvIndexCard',
+      'label': 'UV Index',
+      'color': Colors.orange,
+      'child': const UVIndexWidget(),
+      'height': 100.0,
+    },
+    {
+      'key': 'feelsLikeCard',
+      'label': 'Feels Like Temp',
+      'color': Colors.purple,
+      'child': const FeelsLikeTemperatureWidget(),
+      'height': 100.0,
+    },
+    {
+      'key': 'conditionCard',
+      'label': 'Weather Condition',
+      'color': Colors.grey,
+      'child': const WeatherConditionWidget(),
+      'height': 120.0,
     },
   ];
+
   final List<Map<String, dynamic>> unseenItems = [];
+
 
 
   @override
@@ -48,13 +88,12 @@ class _WeatherPageState extends State<WeatherPage> {
                 key: ValueKey(item['key']),
                 child: item['child'],
                 height: item['height'],
-                onDelete: () {
-                  setState(() {
-                    unseenItems.add(item);
-                    items.removeWhere((i) =>
-                    i['key'] == item['key']);
-                  });
-                },
+                  onDelete: () {
+                    setState(() {
+                      unseenItems.add(item); // already includes 'child'
+                      items.removeWhere((i) => i['key'] == item['key']);
+                    });
+                  },
               ),
           ],
         ),
