@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/Widgets/DeletableCard.dart';
 
 class RestorePage extends StatefulWidget {
   final List<Map<String, dynamic>> unseenItems;
@@ -8,7 +9,6 @@ class RestorePage extends StatefulWidget {
   @override
   State<RestorePage> createState() => _RestorePageState();
 }
-
 
 class _RestorePageState extends State<RestorePage> {
   final Set<String> selectedKeys = {};
@@ -21,7 +21,13 @@ class _RestorePageState extends State<RestorePage> {
         padding: const EdgeInsets.all(16),
         children: widget.unseenItems.map((item) {
           final isSelected = selectedKeys.contains(item['key']);
-          return GestureDetector(
+
+          return DeletableCard(
+            key: ValueKey(item['key']),
+            child: item['child'],
+            height: item['height'] ?? 150.0,
+            isDimmed: true,
+            isSelected: isSelected,
             onTap: () {
               setState(() {
                 if (isSelected) {
@@ -31,27 +37,7 @@ class _RestorePageState extends State<RestorePage> {
                 }
               });
             },
-            child: Card(
-              color: item['color'].withOpacity(isSelected ? 1.0 : 0.5),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-              elevation: isSelected ? 6 : 2,
-              margin: const EdgeInsets.symmetric(vertical: 8),
-                child: SizedBox(
-                  height: item['height'] ?? 150.0,
-                  child: Center(
-                    child: item['child'] ?? Text(
-                      item['label'] ?? 'Unnamed',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-            ),
+            onDelete: () {}, // not used on restore page
           );
         }).toList(),
       ),
