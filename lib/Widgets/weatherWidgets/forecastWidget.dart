@@ -42,7 +42,7 @@ class ForecastWidget extends StatelessWidget {
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
-                        color: Colors.grey.shade200,
+                        color: Theme.of(context).splashColor
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
