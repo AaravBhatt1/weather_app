@@ -39,6 +39,13 @@ class _WeatherPageState extends State<WeatherPage> {
       'height': 150.0,
     },
     {
+      'key': 'forecastCard',
+      'label': 'Forecast',
+      'color': Colors.lightBlue,
+      'child': const ForecastWidget(),
+      'height': 300.0,
+    },
+    {
       'key': 'topTipCard',
       'label': 'Top Tip',
       'color': Colors.green,
