@@ -23,7 +23,7 @@ class _AddplantspageState extends State<Addplantspage> {
           List<String> myPlants = UserPlants().getAll();
           return allPlants.map(
               (p) => CheckboxListTile(
-                  title: Text(p.name),
+                  title: Text("${p.name[0].toUpperCase()}${p.name.substring(1)}"),
                   value: myPlants.contains(p.name),
                   onChanged: (newValue) {
                     if (newValue == null) return;

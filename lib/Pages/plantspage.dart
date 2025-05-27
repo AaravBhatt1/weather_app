@@ -27,7 +27,7 @@ class _PlantsPageState extends State<PlantsPage> {
         children: [
           for (final plantName in userPlants)
             ListTile(
-              title: Text(plantName),
+              title: Text("${plantName[0].toUpperCase()}${plantName.substring(1)}"),
               onTap: () {
                 final plant = testPlants.firstWhere((p) => p.name == plantName);
                 Navigator.push(
