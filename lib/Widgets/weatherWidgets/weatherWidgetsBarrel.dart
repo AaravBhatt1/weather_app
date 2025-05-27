@@ -9,3 +9,4 @@ export 'locationWidget.dart';
 export 'topTipWidget.dart';
 export 'cloudCoverWidget.dart';
 export 'pressureWidget.dart';
+export 'forecastWidget.dart';
