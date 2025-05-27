@@ -33,6 +33,8 @@ class ForecastWidget extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final day = forecastDays[index];
                     final date = day['date'];
+                    final parts = date.substring(5).split('-');
+                    final ukDate = '${parts[1]}-${parts[0]}';
                     final iconUrl = "https:${day['day']['condition']['icon']}";
                     final avgTemp = day['day']['avgtemp_c'];
                     final condition = day['day']['condition']['text'];
@@ -50,7 +52,7 @@ class ForecastWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            date.substring(5), // Its the american way soz, not too sure how to change it
+                            ukDate,
                             style: const TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
