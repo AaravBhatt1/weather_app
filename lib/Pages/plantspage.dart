@@ -14,7 +14,7 @@ class PlantsPage extends StatefulWidget {
 }
 
 class _PlantsPageState extends State<PlantsPage> {
-  final List<PlantEntry> userPlants = UserPlants().getAll();
+  List<String> userPlants = UserPlants().getAll();
 
 
   @override
@@ -27,26 +27,23 @@ class _PlantsPageState extends State<PlantsPage> {
         children: [
           for (final plant in userPlants)
             ExpansionTile(
-              title: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => PlantPage(plantEntry: plant),
-                    ),
-                  );
-                },
-                child: Text(plant.name),
-              ),
+              title: Text(plant),
               children: const [
-                Text("Test")
               ],
             )
         ],
       ),
       floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.add),
-          onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => Addplantspage()))
+          child: const Icon(Icons.edit),
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => Addplantspage())).then(
+                (v) async {
+                  dynamic x = await v;
+                  userPlants = UserPlants().getAll();
+                  setState(() {});
+                }
+            );
+          }
       ),
     );
   }
