@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/Widgets/apibuilder.dart';
+import 'package:weather_app/Widgets/currentapibuilder.dart';
 
 class PrecipitationWidget extends StatelessWidget {
   const PrecipitationWidget({super.key});
@@ -9,7 +9,7 @@ class PrecipitationWidget extends StatelessWidget {
     return SizedBox(
       height: 200,
       width: 300,
-      child: ApiBuilder(
+      child: CurrentWeatherApiBuilder(
         builder: (context, data) {
           final precip = data['current']['precip_mm'];
 

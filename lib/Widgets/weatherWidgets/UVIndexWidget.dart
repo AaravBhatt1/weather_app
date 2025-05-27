@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/Widgets/apibuilder.dart';
+import 'package:weather_app/Widgets/currentapibuilder.dart';
 
 class UVIndexWidget extends StatelessWidget {
   const UVIndexWidget({super.key});
@@ -9,7 +9,7 @@ class UVIndexWidget extends StatelessWidget {
     return SizedBox(
       height: 200,
       width: 300,
-      child: ApiBuilder(
+      child: CurrentWeatherApiBuilder(
         builder: (context, data) {
           final uv = data['current']['uv'];
 

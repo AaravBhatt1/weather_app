@@ -2,36 +2,49 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/Abstract/plant.dart';
 import 'package:weather_app/Abstract/userplants.dart';
 
-class Addplantspage extends StatelessWidget {
+class Addplantspage extends StatefulWidget {
   const Addplantspage({super.key});
 
+  @override
+  State<Addplantspage> createState() => _AddplantspageState();
+}
+
+class _AddplantspageState extends State<Addplantspage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Container(),
         title:  const Text("Add Plants"),
-        leading: const BackButton(),
       ),
       body: ListView(
         children: () {
-          List<PlantEntry> unnaddedPlants = [];
-          List<PlantEntry> myPlants = UserPlants().getAll();
-          for (final plant in loadPlants()) {
-            if (!myPlants.contains(plant)) {
-              unnaddedPlants.add(plant);
-            }
-          }
-          return unnaddedPlants.map((plantEntry) {
-            return ListTile(
-              title: Text(plantEntry.name),
-              onTap: () {
-                final clonedPlant = plantEntry.copyDetached();
-                UserPlants().addPlant(clonedPlant);
-                Navigator.pop(context);
-              }
-            );
-          }).toList();
-        }()
+          List<PlantEntry> allPlants = loadPlants();
+          List<String> myPlants = UserPlants().getAll();
+          return allPlants.map(
+              (p) => CheckboxListTile(
+                  title: Text(p.name),
+                  value: myPlants.contains(p.name),
+                  onChanged: (newValue) {
+                    if (newValue == null) return;
+                    if (newValue) {
+                      setState(() {
+                        UserPlants().addPlant(p.name);
+                      });
+                    } else {
+                      setState(() {
+                        print ("Test");
+                        UserPlants().removePlant(p.name);
+                      });
+                    }
+                  }
+              )
+          ).toList();
+        } ()
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.check),
+        onPressed: () => Navigator.of(context).pop(),
       ),
     );
   }
