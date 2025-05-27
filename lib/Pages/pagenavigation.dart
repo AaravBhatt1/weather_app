@@ -15,7 +15,7 @@ class _PageNavigationState extends State<PageNavigation> {
   int pageIndex = 0;
   List<NavigationDestination> navBarDestinations = const [
     NavigationDestination(icon: Icon(Icons.cloud), label: "Weather"),
-    NavigationDestination(icon: Icon(Icons.notifications), label: "My Plants"), // TODO: Add badges
+    NavigationDestination(icon: Icon(Icons.grass), label: "My Plants"), // TODO: Add badges
     NavigationDestination(icon: Icon(Icons.settings), label: "Settings")
   ];
   final List<Widget> pages = const [
