@@ -50,7 +50,7 @@ class TopTipWidget extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           Image.asset(
-            'assets/plant2.png',
+            'assets/plant.png',
             width: 50,
             height: 50,
             fit: BoxFit.contain,
