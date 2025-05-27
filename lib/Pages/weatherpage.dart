@@ -38,11 +38,11 @@ class _WeatherPageState extends State<WeatherPage> {
       'height': 150.0,
     },
     {
-      'key': 'humidityCard',
-      'label': 'Humidity',
-      'color': Colors.teal,
-      'child': const HumidityWidget(),
-      'height': 150.0,
+      'key': 'topTipCard',
+      'label': 'Top Tip',
+      'color': Colors.green,
+      'child': TopTipWidget(),
+      'height': 300.0,
     },
     {
       'key': 'precipitationCard',
@@ -50,6 +50,23 @@ class _WeatherPageState extends State<WeatherPage> {
       'color': Colors.blue,
       'child': const PrecipitationWidget(),
       'height': 150.0,
+    }
+  ];
+
+  final List<Map<String, dynamic>> unseenItems = [
+    {
+      'key': 'feelsLikeCard',
+      'label': 'Feels Like Temp',
+      'color': Colors.purple,
+      'child': const FeelsLikeTemperatureWidget(),
+      'height': 150.0,
+    },
+    {
+      'key': 'pressureCard',
+      'label': 'Pressure',
+      'color': Colors.deepPurpleAccent,
+      'child': const PressureWidget(),
+      'height': 200.0,
     },
     {
       'key': 'windCard',
@@ -64,15 +81,19 @@ class _WeatherPageState extends State<WeatherPage> {
       'color': Colors.orange,
       'child': const UVIndexWidget(),
       'height': 150.0,
-    }
-  ];
-
-  final List<Map<String, dynamic>> unseenItems = [
+    },
     {
-      'key': 'feelsLikeCard',
-      'label': 'Feels Like Temp',
-      'color': Colors.purple,
-      'child': const FeelsLikeTemperatureWidget(),
+      'key': 'humidityCard',
+      'label': 'Humidity',
+      'color': Colors.teal,
+      'child': const HumidityWidget(),
+      'height': 150.0,
+    },
+    {
+      'key': 'cloudCoverCard',
+      'label': 'Cloud Cover',
+      'color': Colors.red,
+      'child': const CloudCoverWidget(),
       'height': 150.0,
     }
   ];
