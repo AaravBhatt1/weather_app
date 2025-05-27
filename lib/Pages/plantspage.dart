@@ -21,7 +21,7 @@ class _PlantsPageState extends State<PlantsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Plant Notifications'),
+        title: Text('My Plants'),
       ),
       body: ListView(
         children: [
