@@ -17,50 +17,65 @@ class _WeatherPageState extends State<WeatherPage> {
 
   final List<Map<String, dynamic>> items = [
     {
-      'key': 'humidityCard',
-      'label': 'Humidity',
-      'color': Colors.teal,
-      'child': const HumidityWidget(),
-      'height': 100.0,
-    },
-    {
-      'key': 'precipitationCard',
-      'label': 'Precipitation',
-      'color': Colors.blue,
-      'child': const PrecipitationWidget(),
-      'height': 100.0,
-    },
-    {
-      'key': 'windCard',
-      'label': 'Wind',
-      'color': Colors.indigo,
-      'child': const WindWidget(),
-      'height': 100.0,
-    },
-    {
-      'key': 'uvIndexCard',
-      'label': 'UV Index',
-      'color': Colors.orange,
-      'child': const UVIndexWidget(),
-      'height': 100.0,
-    },
-    {
-      'key': 'feelsLikeCard',
-      'label': 'Feels Like Temp',
-      'color': Colors.purple,
-      'child': const FeelsLikeTemperatureWidget(),
-      'height': 100.0,
+      'key': 'locationCard',
+      'label': 'Location',
+      'color': Colors.brown,
+      'child': const LocationWidget(),
+      'height': 150.0,
     },
     {
       'key': 'conditionCard',
       'label': 'Weather Condition',
       'color': Colors.grey,
       'child': const WeatherConditionWidget(),
-      'height': 120.0,
+      'height': 300.0,
     },
+    {
+      'key': 'temperatureCard',
+      'label': 'Temperature',
+      'color': Colors.deepOrange,
+      'child': const TemperatureWidget(),
+      'height': 150.0,
+    },
+    {
+      'key': 'humidityCard',
+      'label': 'Humidity',
+      'color': Colors.teal,
+      'child': const HumidityWidget(),
+      'height': 150.0,
+    },
+    {
+      'key': 'precipitationCard',
+      'label': 'Precipitation',
+      'color': Colors.blue,
+      'child': const PrecipitationWidget(),
+      'height': 150.0,
+    },
+    {
+      'key': 'windCard',
+      'label': 'Wind',
+      'color': Colors.indigo,
+      'child': const WindWidget(),
+      'height': 150.0,
+    },
+    {
+      'key': 'uvIndexCard',
+      'label': 'UV Index',
+      'color': Colors.orange,
+      'child': const UVIndexWidget(),
+      'height': 150.0,
+    }
   ];
 
-  final List<Map<String, dynamic>> unseenItems = [];
+  final List<Map<String, dynamic>> unseenItems = [
+    {
+      'key': 'feelsLikeCard',
+      'label': 'Feels Like Temp',
+      'color': Colors.purple,
+      'child': const FeelsLikeTemperatureWidget(),
+      'height': 150.0,
+    }
+  ];
 
 
 

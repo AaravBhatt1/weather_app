@@ -5,3 +5,4 @@ export 'temperaturewidget.dart';
 export 'UVIndexWidget.dart';
 export 'weatherConditionWidget.dart';
 export 'windWidget.dart';
+export 'locationWidget.dart';
