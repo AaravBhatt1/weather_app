@@ -37,3 +37,19 @@ Future<void> importPlantsFromJson() async {
 
   await box.addAll(plants);
 }
+
+extension PlantEntryClone on PlantEntry {
+  PlantEntry copyDetached() {
+    return PlantEntry(
+      name: name,
+      image: image,
+      type: type,
+      description: description,
+      activities: Map<String, List<bool>>.fromEntries(
+        activities.entries.map(
+          (e) => MapEntry(e.key, List<bool>.from(e.value)),
+        ),
+      ),
+    );
+  }
+}

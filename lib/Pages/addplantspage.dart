@@ -17,13 +17,21 @@ class Addplantspage extends StatelessWidget {
           List<PlantEntry> unnaddedPlants = [];
           List<PlantEntry> myPlants = UserPlants().getAll();
           for (final plant in loadPlants()) {
-            if (!myPlants.contains(plant))
+            if (!myPlants.contains(plant)) {
               unnaddedPlants.add(plant);
+            }
           }
-          return unnaddedPlants.map((plantEntry) => ListTile(
-            title: Text(plantEntry.name)
-          )).toList();
-        } ()
+          return unnaddedPlants.map((plantEntry) {
+            return ListTile(
+              title: Text(plantEntry.name),
+              onTap: () {
+                final clonedPlant = plantEntry.copyDetached();
+                UserPlants().addPlant(clonedPlant);
+                Navigator.pop(context);
+              }
+            );
+          }).toList();
+        }()
       ),
     );
   }

@@ -14,8 +14,19 @@ class PlantsPage extends StatefulWidget {
 }
 
 class _PlantsPageState extends State<PlantsPage> {
-  final List<PlantEntry> userPlants = UserPlants().getAll();
+  List<PlantEntry> userPlants = [];
 
+  @override
+  void initState() {
+    super.initState();
+    _loadUserPlants();
+  }
+
+  void _loadUserPlants() {
+    setState(() {
+      userPlants = UserPlants().getAll();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,31 +34,40 @@ class _PlantsPageState extends State<PlantsPage> {
       appBar: AppBar(
         title: Text('My Plant Notifications'),
       ),
-      body: ListView(
-        children: [
-          for (final plant in userPlants)
-            ExpansionTile(
-              title: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => PlantPage(plantEntry: plant),
-                    ),
-                  );
-                },
-                child: Text(plant.name),
-              ),
-              children: const [
-                Text("Test")
-              ],
-            )
-        ],
-      ),
+      body: userPlants.isEmpty
+          ? const Center(child: Text("No plants added yet."))
+          : ListView.builder(
+              itemCount: userPlants.length,
+              itemBuilder: (context, index) {
+                final plant = userPlants[index];
+                return ExpansionTile(
+                  title: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PlantPage(plantEntry: plant),
+                        ),
+                      );
+                    },
+                    child: Text(plant.name),
+                  ),
+                  //children: const [
+                  //  Text("Test"),
+                  //],
+                );
+              },
+            ),
       floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.add),
-          onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => Addplantspage()))
+        child: const Icon(Icons.add),
+        onPressed: () async {
+          await Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const Addplantspage()),
+          );
+          _loadUserPlants();
+        },
       ),
     );
   }
 }
+
