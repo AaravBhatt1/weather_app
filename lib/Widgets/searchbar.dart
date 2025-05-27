@@ -8,8 +8,8 @@ class WeatherSearchbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   return SearchAnchor.bar(
-    barHintText: "Search for information abouts Plants Here",
-    viewHintText: "Search for information abouts Plants Here",
+    barHintText: "Search for information about Plants Here",
+    viewHintText: "Search for information about Plants Here",
     suggestionsBuilder: (BuildContext context, SearchController controller) async {
       final plants = loadPlants()
           .where((PlantEntry e) => e.name.toLowerCase().contains(controller.text.toLowerCase()))

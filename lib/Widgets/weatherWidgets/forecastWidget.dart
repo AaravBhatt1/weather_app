@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:weather_app/Widgets/futureapibuilder.dart';
+import 'package:weather_app/preferences.dart';
 
 class ForecastWidget extends StatelessWidget {
   const ForecastWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final prefs = Provider.of<Preferences>(context);
+    final useMetric = prefs.useMetric;
     return SizedBox(
       height: 200,
       width: 300,
@@ -36,7 +40,10 @@ class ForecastWidget extends StatelessWidget {
                     final parts = date.substring(5).split('-');
                     final ukDate = '${parts[1]}-${parts[0]}';
                     final iconUrl = "https:${day['day']['condition']['icon']}";
-                    final avgTemp = day['day']['avgtemp_c'];
+                    final avgTemp = useMetric
+                        ? day['day']['avgtemp_c']
+                        : day['day']['avgtemp_f'];
+                    final unit = useMetric ? '°C' : '°F';
                     final condition = day['day']['condition']['text'];
 
                     return Container(
@@ -65,7 +72,7 @@ class ForecastWidget extends StatelessWidget {
                             errorBuilder: (_, __, ___) => const Icon(Icons.cloud),
                           ),
                           Text(
-                            '${avgTemp.round()}°C',
+                            '${avgTemp.round()}$unit',
                             style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
