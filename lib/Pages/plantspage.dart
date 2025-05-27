@@ -25,12 +25,19 @@ class _PlantsPageState extends State<PlantsPage> {
       ),
       body: ListView(
         children: [
-          for (final plant in userPlants)
-            ExpansionTile(
-              title: Text(plant),
-              children: const [
-              ],
-            )
+          for (final plantName in userPlants)
+            ListTile(
+              title: Text(plantName),
+              onTap: () {
+                final plant = testPlants.firstWhere((p) => p.name == plantName);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PlantPage(plantEntry: plant),
+                  ),
+                );
+              },
+            ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
