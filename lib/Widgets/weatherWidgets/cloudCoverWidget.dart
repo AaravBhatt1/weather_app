@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/Widgets/apibuilder.dart';
+import 'package:weather_app/Widgets/currentapibuilder.dart';
 
 class CloudCoverWidget extends StatelessWidget {
   const CloudCoverWidget({super.key});
@@ -9,7 +9,7 @@ class CloudCoverWidget extends StatelessWidget {
     return SizedBox(
       height: 200,
       width: 300,
-      child: ApiBuilder(
+      child: CurrentWeatherApiBuilder(
         builder: (context, data) {
           final cloud = data['current']['cloud'];
           return Column(

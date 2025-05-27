@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Widgets/DeletableCard.dart';
-import 'package:weather_app/Widgets/apibuilder.dart';
+import 'package:weather_app/Widgets/currentapibuilder.dart';
 
 class FeelsLikeTemperatureWidget extends StatelessWidget {
   const FeelsLikeTemperatureWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ApiBuilder(
+    return CurrentWeatherApiBuilder(
       builder: (context, data) {
         final feelsLike = data['current']['feelslike_c'];
         return Text(

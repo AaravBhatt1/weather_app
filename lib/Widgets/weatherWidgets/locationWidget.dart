@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/Widgets/apibuilder.dart';
+import 'package:weather_app/Widgets/currentapibuilder.dart';
 
 class LocationWidget extends StatelessWidget {
   const LocationWidget({super.key});
@@ -9,7 +9,7 @@ class LocationWidget extends StatelessWidget {
     return SizedBox(
       height: 100,
       width: 300,
-      child: ApiBuilder(
+      child: CurrentWeatherApiBuilder(
         builder: (context, data) {
           final name = data['location']['name'];
           final region = data['location']['region'];

@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class ApiBuilder extends StatelessWidget {
-  const ApiBuilder({super.key, required this.builder});
+class CurrentWeatherApiBuilder extends StatelessWidget {
+  const CurrentWeatherApiBuilder({super.key, required this.builder});
 
   final Widget Function(BuildContext, Map) builder;
 
