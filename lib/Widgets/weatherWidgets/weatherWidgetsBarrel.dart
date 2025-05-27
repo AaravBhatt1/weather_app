@@ -6,3 +6,6 @@ export 'UVIndexWidget.dart';
 export 'weatherConditionWidget.dart';
 export 'windWidget.dart';
 export 'locationWidget.dart';
+export 'topTipWidget.dart';
+export 'cloudCoverWidget.dart';
+export 'pressureWidget.dart';

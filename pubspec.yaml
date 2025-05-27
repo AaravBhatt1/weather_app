@@ -82,6 +82,9 @@ flutter:
     - assets/wind.png
     - assets/rain.png
     - assets/sun2.png
+    - assets/plant.png
+    - assets/cloud.png
+    - assets/pressure.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

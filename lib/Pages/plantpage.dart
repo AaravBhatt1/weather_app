@@ -60,25 +60,25 @@ class PlantPage extends StatelessWidget {
                   Table(
                     border: TableBorder.all(),
                     columnWidths: const {
-                      0: FlexColumnWidth(),
-                      1: FlexColumnWidth(),
-                      2: FlexColumnWidth(),
-                      3: FlexColumnWidth(),
-                      4: FlexColumnWidth(),
-                      5: FlexColumnWidth(),
-                      6: FlexColumnWidth(),
-                      7: FlexColumnWidth(),
-                      8: FlexColumnWidth(),
-                      9: FlexColumnWidth(),
-                      10: FlexColumnWidth(),
-                      11: FlexColumnWidth(),
-                      12: FlexColumnWidth(),
+                      0: FlexColumnWidth(2),
+                      1: FlexColumnWidth(1),
+                      2: FlexColumnWidth(1),
+                      3: FlexColumnWidth(1),
+                      4: FlexColumnWidth(1),
+                      5: FlexColumnWidth(1),
+                      6: FlexColumnWidth(1),
+                      7: FlexColumnWidth(1),
+                      8: FlexColumnWidth(1),
+                      9: FlexColumnWidth(1),
+                      10: FlexColumnWidth(1),
+                      11: FlexColumnWidth(1),
+                      12: FlexColumnWidth(1),
                     },
                     children: [
                       const TableRow(
                         children: [
                           Padding(
-                            padding: EdgeInsets.all(4.0),
+                            padding: EdgeInsets.all(0.0),
                             child: Text(
                               'Activity',
                               style: TextStyle(fontWeight: FontWeight.bold),
@@ -86,51 +86,51 @@ class PlantPage extends StatelessWidget {
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Jan', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('J', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Feb', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('F', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Mar', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('M', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Apr', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('A', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('May', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('M', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Jun', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('J', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Jul', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('J', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Aug', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('A', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Sep', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('S', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Oct', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('O', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Nov', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('N', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                           Padding(
                             padding: EdgeInsets.all(4.0),
-                            child: Text('Dec', style: TextStyle(fontWeight: FontWeight.bold)),
+                            child: Text('D', style: TextStyle(fontWeight: FontWeight.bold)),
                           ),
                         ],
                       ),
@@ -139,18 +139,18 @@ class PlantPage extends StatelessWidget {
                           .map((entry) => TableRow(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(1.0),
+                            padding: const EdgeInsets.all(0.0),
                             child: Text(entry.key),
                           ),
                           ...List.generate(
                             12,
                                 (i) => Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                              padding: const EdgeInsets.symmetric(horizontal: 0.0),
                               child: i < entry.value.length
                                   ? Icon(
                                 entry.value[i] ? Icons.check_circle : Icons.cancel,
                                 color: entry.value[i] ? Colors.green : Colors.red,
-                                size: 20,
+                                size: 25,
                               )
                                   : const SizedBox(width: 20),
                             ),
