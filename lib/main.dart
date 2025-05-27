@@ -18,6 +18,7 @@ void main() async{
   await Hive.openBox('preferences');
 
   await UserPlants().init();
+  UserPlants().box.clear();
 
   runApp(
     ChangeNotifierProvider<Preferences>(
