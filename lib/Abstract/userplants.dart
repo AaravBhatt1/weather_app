@@ -5,7 +5,7 @@ import 'package:weather_app/Abstract/plant.dart';
 class UserPlants {
   UserPlants._internal();
 
-  late final Box<PlantEntry> _box;
+  late final Box<String> _box;
   static final UserPlants _instance = UserPlants._internal();
   final String boxName = "UserPlants";
 
@@ -24,12 +24,16 @@ class UserPlants {
     }
   }
 
-  List<PlantEntry> getAll() {
+  List<String> getAll() {
     return _box.values.toList();
   }
 
-  void addPlant(PlantEntry entry) {
-    _box.add(entry);
+  void addPlant(String entry) {
+    _box.put(entry, entry);
+  }
+
+  void removePlant(String entry) {
+    _box.delete(entry);
   }
 
 }
