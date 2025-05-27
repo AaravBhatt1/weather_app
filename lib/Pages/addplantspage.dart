@@ -33,7 +33,6 @@ class _AddplantspageState extends State<Addplantspage> {
                       });
                     } else {
                       setState(() {
-                        print ("Test");
                         UserPlants().removePlant(p.name);
                       });
                     }
