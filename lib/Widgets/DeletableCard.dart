@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
+import 'package:weather_app/Widgets/weatherWidgets/weatherWidgetsBarrel.dart';
 
+import 'dart:math';
 
 class DeletableCard extends StatefulWidget {
   final double height;
   final VoidCallback onDelete;
   final Widget? child;
+  final bool isDimmed;
+  final bool isSelected;
+  final VoidCallback? onTap;
 
   const DeletableCard({
     super.key,
     required this.onDelete,
     this.child,
-    this.height = 200 // default height of 200
+    this.height = 200,
+    this.isDimmed = false,
+    this.isSelected = false,
+    this.onTap,
   });
 
   @override
@@ -34,13 +41,11 @@ class _DeletableCardState extends State<DeletableCard>
     )..addListener(() {
       if (mounted) setState(() {});
     });
-    _shakeAnimation =
-        Tween<double>(begin: 0, end: 8 * pi).animate(CurvedAnimation(
-          parent: _controller,
-          curve: Curves.linear,
-        ));
 
-    _controller.repeat(period: const Duration(milliseconds: 1000));
+    _shakeAnimation = Tween<double>(begin: 0, end: 8 * pi).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.linear),
+    );
+
     _controller.stop();
   }
 
@@ -65,26 +70,30 @@ class _DeletableCardState extends State<DeletableCard>
 
   @override
   Widget build(BuildContext context) {
+    final isRestoreMode = widget.onTap != null;
+
     return GestureDetector(
-      onDoubleTap: _toggleDeleteMode,
+      onDoubleTap: isRestoreMode ? widget.onTap : _toggleDeleteMode,
+      onTap: isRestoreMode ? widget.onTap : null,
       child: Transform.translate(
         offset: _showDelete ? Offset(_shakeOffset, 0) : Offset.zero,
         child: Stack(
           children: [
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(40),
-              ),
-              elevation: 4,
-              margin: const EdgeInsets.symmetric(vertical: 12),
-              child: SizedBox(
-                height: widget.height,
-                child: Center(
-                 child: widget.child,
+            Opacity(
+              opacity: widget.isDimmed && !widget.isSelected ? 0.4 : 1.0,
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                elevation: 4,
+                margin: const EdgeInsets.symmetric(vertical: 12),
+                child: SizedBox(
+                  height: widget.height,
+                  child: Center(child: widget.child),
                 ),
               ),
             ),
-            if (_showDelete)
+            if (_showDelete && !isRestoreMode)
               Positioned(
                 top: 0,
                 right: 0,
